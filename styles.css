@@ -18,7 +18,7 @@ body {
   grid-template-columns: repeat(20, minmax(auto, 1.25em));
   grid-auto-rows: 3em;
   gap: .25em;
-  justify-content: center;
+  justify-content: right;
   bottom: 2em;
 }
 
