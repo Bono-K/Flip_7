@@ -18,8 +18,8 @@ body {
   justify-content: end-center;
   align-content: center;
   flex-grow: 1;
-  grid-template-columns: repeat(5, 4em);
-  grid-template-rows: repeat(6, 4em);
+  grid-template-columns: repeat(7, 4em);
+  grid-template-rows: repeat(15, 4em);
   gap: .25em;
   margin-bottom: 1.5em;
 }
@@ -46,9 +46,6 @@ body {
   user-select: none;
 }
 
-.key.large {
-  grid-column: span 3;
-}
 
 .key > svg {
   width: 1.75em;
