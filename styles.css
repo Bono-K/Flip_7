@@ -75,7 +75,7 @@ body {
 
 .guess-grid {
   display: grid;
-  justify-content: center;
+  justify-content: left;
   align-content: center;
   flex-grow: 1;
   grid-template-columns: repeat(7, 4em);
@@ -97,7 +97,7 @@ body {
   font-weight: bold;
   display: flex;
   justify-content: left;
-  align-items: left;
+  align-items: center;
   user-select: none;
   transition: transform 250ms linear;
 }
