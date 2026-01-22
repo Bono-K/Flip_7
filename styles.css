@@ -25,32 +25,22 @@ body {
 }
 
 .key {
-  font-size: inherit;
-  grid-column: span 2;
-  border: none;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  font-size: 2em;
+  color: white;
   background-color: hsl(
     var(--hue, 200),
     var(--saturation, 1%),
     calc(var(--lightness-offset, 0%) + var(--lightness, 51%))
-  );
-  color: white;
-  fill: white;
+  );  
+  border: .05em solid hsl(240, 2%, 23%);
   text-transform: uppercase;
-  border-radius: .25em;
-  cursor: pointer;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   user-select: none;
-}
+  transition: transform 250ms linear;
 
-
-.key > svg {
-  width: 1.75em;
-  height: 1.75em;
-  pointer-events: none;
-}
 
 .key:hover, .key:focus {
   --lightness-offset: 10%;
