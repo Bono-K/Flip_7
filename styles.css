@@ -18,7 +18,7 @@ body {
   grid-template-columns: repeat(20, minmax(auto, 1.25em));
   grid-auto-rows: 3em;
   gap: .25em;
-  justify-content: right;
+  justify-content: flex-end;
   bottom: 2em;
 }
 
@@ -75,7 +75,7 @@ body {
 
 .guess-grid {
   display: grid;
-  justify-content: left;
+  justify-content: flex-start;
   align-content: center;
   flex-grow: 1;
   grid-template-columns: repeat(7, 4em);
