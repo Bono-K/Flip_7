@@ -15,7 +15,7 @@ body {
 
 .keyboard {
   display: grid;
-  justify-content: right-center;
+  justify-content: end-center;
   align-content: center;
   flex-grow: 1;
   grid-template-columns: repeat(5, 4em);
@@ -99,7 +99,7 @@ body {
   text-transform: uppercase;
   font-weight: bold;
   display: flex;
-  justify-content: left;
+  justify-content: center;
   align-items: center;
   user-select: none;
   transition: transform 250ms linear;
