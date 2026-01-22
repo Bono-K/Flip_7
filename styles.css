@@ -15,7 +15,7 @@ body {
 
 .keyboard {
   display: grid;
-  justify-content: end-center;
+  justify-content: right;
   align-content: center;
   flex-grow: 1;
   grid-template-columns: repeat(8, 2em);
