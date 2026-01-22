@@ -24,6 +24,24 @@ body {
   margin-bottom: 1.5em;
 }
 
+.sum {
+  font-size: 1em;
+  color: white;
+  background-color: hsl(
+    var(--hue, 200),
+    var(--saturation, 10%),
+    calc(var(--lightness-offset, 0%) + var(--lightness, 51%))
+  );  
+  border: .05em solid hsl(240, 2%, 23%);
+  text-transform: uppercase;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  transition: transform 250ms linear;
+}
+
 .key {
   font-size: 1em;
   color: white;
