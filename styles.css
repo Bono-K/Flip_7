@@ -96,8 +96,8 @@ body {
   text-transform: uppercase;
   font-weight: bold;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: left;
+  align-items: left;
   user-select: none;
   transition: transform 250ms linear;
 }
