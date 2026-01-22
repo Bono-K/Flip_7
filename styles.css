@@ -18,8 +18,8 @@ body {
   justify-content: end-center;
   align-content: center;
   flex-grow: 1;
-  grid-template-columns: repeat(7, 4em);
-  grid-template-rows: repeat(15, 4em);
+  grid-template-columns: repeat(7, 3em);
+  grid-template-rows: repeat(15, 3em);
   gap: .25em;
   margin-bottom: 1.5em;
 }
