@@ -18,14 +18,14 @@ body {
   justify-content: end-center;
   align-content: center;
   flex-grow: 1;
-  grid-template-columns: repeat(7, 3em);
-  grid-template-rows: repeat(15, 3em);
+  grid-template-columns: repeat(7, 2em);
+  grid-template-rows: repeat(15, 2em);
   gap: .25em;
   margin-bottom: 1.5em;
 }
 
 .key {
-  font-size: 2em;
+  font-size: 1em;
   color: white;
   background-color: hsl(
     var(--hue, 200),
