@@ -87,25 +87,17 @@ let deck = [
 // const WORD_LENGTH = 5
 const FLIP_ANIMATION_DURATION = 500
 const DANCE_ANIMATION_DURATION = 500
-const keyboard = document.querySelector("[data-keyboard]")
 const alertContainer = document.querySelector("[data-alert-container]")
 const guessGrid = document.querySelector("[data-guess-grid]")
-const offsetFromDate = new Date(2025, 3, 1)
-const msOffset = Date.now() - offsetFromDate
-const dayOffset = msOffset / 1000 / 60 / 60 / 12
-const targetWord = targetWords[Math.floor(dayOffset)]
-const winMessage = winMessages[Math.floor(dayOffset)]
 
 startInteraction()
 
 function startInteraction() {
   document.addEventListener("click", handleMouseClick)
-  document.addEventListener("keydown", handleKeyPress)
 }
 
 function stopInteraction() {
   document.removeEventListener("click", handleMouseClick)
-  document.removeEventListener("keydown", handleKeyPress)
 }
 
 function handleMouseClick(e) {
@@ -123,42 +115,14 @@ function handleMouseClick(e) {
 
 function pressKey() {
   const activeTiles = getActiveTiles()
-//  if (activeTiles.length >= WORD_LENGTH) return
   const nextTile = guessGrid.querySelector(":not([data-letter])")
-//  nextTile.dataset.letter = key.toLowerCase()
   cardSelect = Math.floor(Math.random()*(1,deck.length)-1)
   nextTile.textContent = deck[cardSelect]
   deck=deck.splice(1,cardSelect)
   nextTile.dataset.state = "active"
 }
 
-function deleteKey() {
-  const activeTiles = getActiveTiles()
-  const lastTile = activeTiles[activeTiles.length - 1]
-  if (lastTile == null) return
-  lastTile.textContent = ""
-  delete lastTile.dataset.state
-  delete lastTile.dataset.letter
-}
 
-function submitGuess() {
-	const activeTiles = [...getActiveTiles()]
-//	if (activeTiles.length !== WORD_LENGTH) {
-		showAlert('Not enough letters')
-		shakeTiles(activeTiles)
-		return
-	}
-
-	const guess = activeTiles.reduce((word, tile) => {
-		return word + tile.dataset.letter
-	}, '')
-
-	
-	if (!dictionary.includes(guess)) {
-		showAlert('Not in word list')
-		shakeTiles(activeTiles)
-		return
-	}
 
 	stopInteraction()
 
