@@ -114,32 +114,11 @@ function handleMouseClick(e) {
     return
   }
 
-  if (e.target.matches("[data-enter]")) {
+  if (e.target.matches("stayKey")) {
     submitGuess()
     return
   }
 
-  if (e.target.matches("[data-delete]")) {
-    deleteKey()
-    return
-  }
-}
-
-//function handleKeyPress(e) {
-//  if (e.key === "Enter") {
-//    submitGuess()
-//    return
-//  }
-
-  if (e.key === "Backspace" || e.key === "Delete") {
-    deleteKey()
-    return
-  }
-
-  if (e.key.match(/^[a-z]$/)) {
-    pressKey(e.key)
-    return
-  }
 }
 
 function pressKey() {
