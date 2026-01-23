@@ -120,12 +120,12 @@ body {
 
 .tile.empty {
   grid-column: span 7;
-  color: black
+  color: hsl(240deg 2.86% 6.86%)
 }
 
 .tile.OneEmpty {
   grid-column: span 1;
-  color: black
+  color: hsl(240deg 2.86% 6.86%)
 }
 
 .tile.large {
