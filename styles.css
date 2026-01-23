@@ -140,11 +140,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: hsl(
-    var(--hue, 200),
-    var(--saturation, 1%),
-    calc(var(--lightness-offset, 0%) + var(--lightness, 51%))
-  );
+  background-color: hsl(108.92deg 61.11% 43.34%);
   color: white;
   fill: white;
   text-transform: uppercase;
@@ -161,11 +157,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: hsl(
-    var(--hue, 200),
-    var(--saturation, 1%),
-    calc(var(--lightness-offset, 0%) + var(--lightness, 51%))
-  );
+  background-color: hsl(216deg 70.59% 45.55%);
   color: white;
   fill: white;
   text-transform: uppercase;
