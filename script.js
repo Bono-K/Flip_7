@@ -94,7 +94,7 @@ startInteraction()
 
 function startInteraction() {
   document.addEventListener("click", handleMouseClick)
-  document.addEventListener("keydown", handleKeyPress
+  document.addEventListener("keydown", handleKeyPress)
 }
 
 function stopInteraction() {
