@@ -88,7 +88,7 @@ let deck = [
 const FLIP_ANIMATION_DURATION = 500
 const DANCE_ANIMATION_DURATION = 500
 const alertContainer = document.querySelector("[data-alert-container]")
-const guessGrid = document.querySelector("[.tile]")
+const guessGrid = document.querySelectorAll(".tile")
 
 startInteraction()
 
