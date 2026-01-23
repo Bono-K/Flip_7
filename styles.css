@@ -3,6 +3,11 @@
   font-family: Arial;
 }
 
+.container {
+  display: flex;
+  background-color: DodgerBlue;
+}
+
 body {
   background-color: hsl(240, 3%, 7%);
   display: flex;
@@ -211,7 +216,11 @@ body {
   flex-direction: column;
   align-items: center;
 }
+<div class="container">
+  <div>guess-grid</div>
+  <div>keyboard</div>
 
+</div>
 .alert {
   pointer-events: none;
   background-color: hsl(204, 7%, 85%);
