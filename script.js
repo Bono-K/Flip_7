@@ -91,6 +91,9 @@ const alertContainer = document.querySelector("[data-alert-container]")
 const guessGrid = document.querySelectorAll(".tile")
 const hitKey = document.querySelectorAll(".hitKey")
 const stayKey = document.querySelectorAll(".stayKey")
+
+
+
 let round = 0
 startInteraction()
 
@@ -131,7 +134,11 @@ function pressKey() {
 //  const activeTiles = getActiveTiles()
 	const activeTile = guessGrid[round]
 	const nextTile = activeTile[round+1]
-    cardSelect = Math.random()*(1,deck.length)-1
+	offsetFromDate = new Date(2025, 3, 1)
+	msOffset = Date.now() - offsetFromDate
+	dayOffset = msOffset / 1000 / 60 / 60 / 12
+	cardSelect = deck[Math.floor(dayOffset)]
+	//cardSelect = Math.random()*(1,deck.length)-1
     activeTile.textContent = deck[cardSelect]
     deck=deck.splice(1,cardSelect)
     round = round + 1
