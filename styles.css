@@ -118,6 +118,15 @@ body {
   transition: transform 250ms linear;
 }
 
+.tile.empty {
+  grid-column: span 7;
+  color: hsl(240, 3%, 7%)
+}
+
+.tile.large {
+  grid-column: span 3;
+}
+
 .tile.win-lose {
   font-size: 0em;
 }
