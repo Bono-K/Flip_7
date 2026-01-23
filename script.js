@@ -91,7 +91,7 @@ const alertContainer = document.querySelector("[data-alert-container]")
 const guessGrid = document.querySelectorAll(".tile")
 const hitKey = document.querySelectorAll(".hitKey")
 const stayKey = document.querySelectorAll(".stayKey")
-
+let round = 0
 startInteraction()
 
 function startInteraction() {
@@ -129,8 +129,8 @@ function handleKeyPress(e) {
 
 function pressKey() {
 //  const activeTiles = getActiveTiles()
-	const activeTiles = guessGrid
-	const nextTile = guessGrid.querySelector(":not([data-letter])")
+	const activeTiles = guessGrid[round]
+	const nextTile = activeTiles[round+1]
 //  cardSelect = Math.floor(Math.random()*(1,deck.length)-1)
 //  nextTile.textContent = deck[cardSelect]
   nextTile.textContent = "1"
@@ -146,13 +146,7 @@ function pressKey() {
 
 
 
-//function getActiveTiles() {
-//  return guessGrid.querySelectorAll('[data-state="active"]')
-//}
 
-function getAllTiles() {
-  return guessGrid.querySelectorAll(".tile")
-}
 
 function showAlert(message, duration = 1000) {
   const alert = document.createElement("div")
