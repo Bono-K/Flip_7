@@ -106,10 +106,10 @@ function handleMouseClick(e) {
     return
   }
 
-  if (e.target.matches("stayKey")) {
-    submitGuess()
-    return
-  }
+//  if (e.target.matches("stayKey")) {
+//    submitGuess()
+//    return
+//  }
 
 }
 
@@ -125,7 +125,7 @@ function pressKey() {
 
 
 
-	stopInteraction()
+//	stopInteraction()
 
 
 
