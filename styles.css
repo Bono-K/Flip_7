@@ -149,6 +149,16 @@ body {
   user-select: none;
 }
 
+.hitKey > svg {
+  width: 1.75em;
+  height: 1.75em;
+  pointer-events: none;
+}
+.stayKey > svg {
+  width: 1.75em;
+  height: 1.75em;
+  pointer-events: none;
+}
 
 .tile[data-state="active"] {
   border-color: hsl(200, 1%, 34%);
