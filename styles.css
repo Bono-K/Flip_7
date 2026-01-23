@@ -69,25 +69,7 @@ body {
   pointer-events: none;
 }
 
-.key:hover, .key:focus {
-  --lightness-offset: 10%;
-}
 
-.key.wrong {
-  --lightness: 23%;
-}
-
-.key.wrong-location {
-  --hue: 49;
-  --saturation: 51%;
-  --lightness: 47%;
-}
-
-.key.correct {
-  --hue: 115;
-  --saturation: 29%;
-  --lightness: 43%;
-}
 
 .guess-grid {
   display: grid;
@@ -103,11 +85,6 @@ body {
 .tile {
   font-size: 2em;
   color: white;
-  background-color: hsl(
-    var(--hue, 200),
-    var(--saturation, 1%),
-    calc(var(--lightness-offset, 0%) + var(--lightness, 51%))
-  );  
   border: .05em solid hsl(240, 2%, 23%);
   text-transform: uppercase;
   font-weight: bold;
