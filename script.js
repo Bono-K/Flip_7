@@ -88,7 +88,7 @@ let deck = [
 const FLIP_ANIMATION_DURATION = 500
 const DANCE_ANIMATION_DURATION = 500
 const alertContainer = document.querySelector("[data-alert-container]")
-const guessGrid = document.querySelector("[data-guess-grid]")
+const guessGrid = document.querySelector("[.tile]")
 
 startInteraction()
 
@@ -103,8 +103,9 @@ function stopInteraction() {
 }
 
 function handleMouseClick(e) {
+  showAlert("click", 5000)
   if (e.target.matches("[hitKey]")) {
-    kitKey.classList.add("press")
+	kitKey.classList.add("press")
     pressKey()
     return
   }
@@ -116,6 +117,7 @@ function handleMouseClick(e) {
 
 }
 function handleKeyPress(e) {
+   showAlert("key", 5000)
    if (e.key.match(/^[a-z]$/)) {
     pressKey(e.key)
     return
@@ -142,9 +144,25 @@ stopInteraction()
 
 
 function getActiveTiles() {
-  return guessGrid.querySelectorAll('.tile[data-state="active"]')
+  return guessGrid.querySelectorAll('[data-state="active"]')
 }
 
 function getAllTiles() {
   return guessGrid.querySelectorAll(".tile")
 }
+
+function showAlert(message, duration = 1000) {
+  const alert = document.createElement("div")
+  alert.textContent = message
+  alert.classList.add("alert")
+  alertContainer.prepend(alert)
+  if (duration == null) return
+
+  setTimeout(() => {
+    alert.classList.add("hide")
+    alert.addEventListener("transitionend", () => {
+      alert.remove()
+    })
+  }, duration)
+}
+
