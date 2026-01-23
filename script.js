@@ -130,7 +130,7 @@ function handleKeyPress(e) {
 function pressKey() {
 //  const activeTiles = getActiveTiles()
 	const activeTile = guessGrid[round]
-	const nextTile = activeTiles[round+1]
+	const nextTile = activeTile[round+1]
 //  cardSelect = Math.floor(Math.random()*(1,deck.length)-1)
 //  nextTile.textContent = deck[cardSelect]
     activeTile.textContent = "A"
