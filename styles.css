@@ -154,6 +154,9 @@ body {
   height: 1.75em;
   pointer-events: none;
 }
+.hitKey:hover, .hitKey:focus {
+  --lightness-offset: 10%;
+
 .stayKey > svg {
   width: 1.75em;
   height: 1.75em;
