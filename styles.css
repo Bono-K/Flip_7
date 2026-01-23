@@ -123,6 +123,11 @@ body {
   color: hsl(240, 3%, 7%)
 }
 
+.tile.OneEmpty {
+  grid-column: span 1;
+  color: hsl(240, 3%, 7%)
+}
+
 .tile.large {
   grid-column: span 3;
 }
