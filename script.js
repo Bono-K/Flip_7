@@ -94,10 +94,12 @@ startInteraction()
 
 function startInteraction() {
   document.addEventListener("click", handleMouseClick)
+  document.addEventListener("keydown", handleKeyPress
 }
 
 function stopInteraction() {
   document.removeEventListener("click", handleMouseClick)
+  document.removeEventListener("keydown", handleKeyPress)
 }
 
 function handleMouseClick(e) {
@@ -113,6 +115,23 @@ function handleMouseClick(e) {
 //  }
 
 }
+function handleKeyPress(e) {
+  if (e.key === "Enter") {
+    submitGuess()
+    return
+  }
+
+  if (e.key === "Backspace" || e.key === "Delete") {
+    deleteKey()
+    return
+  }
+
+  if (e.key.match(/^[a-z]$/)) {
+    pressKey(e.key)
+    return
+  }
+}
+
 
 function pressKey() {
   const activeTiles = getActiveTiles()
