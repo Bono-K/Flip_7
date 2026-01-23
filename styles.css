@@ -4,17 +4,7 @@
 }
 
 .container {
-  width: 100%;
-}
-
-.column1 {
-  float: left;
-  width: 50%;
-}
-
-.column2 {
-  float: left;
-  width: 50%;
+  display: flex;
 }
 
 body {
