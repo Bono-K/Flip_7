@@ -1,43 +1,90 @@
-const targetWords = [
-  "glove",
-  "blood",
-  "baits",
-  "noise",
-  "block",
-  "tubes",
+let deck = [
+	"0",
+	"1",
+	"2",
+	"2",
+	"3",
+	"3",
+	"3",
+	"4",
+	"4",
+	"4",
+	"4",
+	"5",
+	"5",
+	"5",
+	"5",
+	"5",
+	"6",
+	"6",
+	"6",
+	"6",
+	"6",
+	"6",
+	"7",
+	"7",
+	"7",
+	"7",
+	"7",
+	"7",
+	"7",
+	"8",
+	"8",
+	"8",
+	"8",
+	"8",
+	"8",
+	"8",
+	"8",
+	"9",
+	"9",
+	"9",
+	"9",
+	"9",
+	"9",
+	"9",
+	"9",
+	"9",
+	"10",
+	"10",
+	"10",
+	"10",
+	"10",
+	"10",
+	"10",
+	"10",
+	"10",
+	"10",
+	"11",
+	"11",
+	"11",
+	"11",
+	"11",
+	"11",
+	"11",
+	"11",
+	"11",
+	"11",
+	"11",
+	"12",
+	"12",
+	"12",
+	"12",
+	"12",
+	"12",
+	"12",
+	"12",
+	"12",
+	"12",
+	"12",
+	"12"
 ]
 
-const winMessages = [
-  "Wear your lab PPE!",
-  "An accepted sample type for F1H and F1L processing",
-  "The workhorse at Hybrid Capture. Grab those target genes!",
-  "A confounding factor at CBO analysis",
-  "Tissue suspended in a parafilm, histo slices curls for F1/F1H analysis!",
-  "Collection device for numerous sample types",
-]
+//const winMessages = [
 
-const dictionary = [
-  "glove",
-  "blood",
-  "baits",
-  "genes",
-  "noise",
-  "block",
-  "tubes",
-  "cells",
-  "tumor",
-  "untie",
-  "refit",
-  "aorta",
-  "adult",
-  "judge",
-  "rower",
-  "artsy",
-  "rural",
-  "shave",
-]
 
-const WORD_LENGTH = 5
+
+// const WORD_LENGTH = 5
 const FLIP_ANIMATION_DURATION = 500
 const DANCE_ANIMATION_DURATION = 500
 const keyboard = document.querySelector("[data-keyboard]")
@@ -62,8 +109,8 @@ function stopInteraction() {
 }
 
 function handleMouseClick(e) {
-  if (e.target.matches("[data-key]")) {
-    pressKey(e.target.dataset.key)
+  if (e.target.matches("hitKey")) {
+    pressKey()
     return
   }
 
@@ -78,11 +125,11 @@ function handleMouseClick(e) {
   }
 }
 
-function handleKeyPress(e) {
-  if (e.key === "Enter") {
-    submitGuess()
-    return
-  }
+//function handleKeyPress(e) {
+//  if (e.key === "Enter") {
+//    submitGuess()
+//    return
+//  }
 
   if (e.key === "Backspace" || e.key === "Delete") {
     deleteKey()
@@ -95,12 +142,14 @@ function handleKeyPress(e) {
   }
 }
 
-function pressKey(key) {
+function pressKey() {
   const activeTiles = getActiveTiles()
-  if (activeTiles.length >= WORD_LENGTH) return
+//  if (activeTiles.length >= WORD_LENGTH) return
   const nextTile = guessGrid.querySelector(":not([data-letter])")
-  nextTile.dataset.letter = key.toLowerCase()
-  nextTile.textContent = key
+//  nextTile.dataset.letter = key.toLowerCase()
+  cardSelect = Math.floor(Math.random()*(1,deck.length)-1)
+  nextTile.textContent = deck[cardSelect]
+  deck=deck.splice(1,cardSelect)
   nextTile.dataset.state = "active"
 }
 
@@ -115,7 +164,7 @@ function deleteKey() {
 
 function submitGuess() {
 	const activeTiles = [...getActiveTiles()]
-	if (activeTiles.length !== WORD_LENGTH) {
+//	if (activeTiles.length !== WORD_LENGTH) {
 		showAlert('Not enough letters')
 		shakeTiles(activeTiles)
 		return
