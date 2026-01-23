@@ -133,7 +133,7 @@ function pressKey() {
 	const nextTile = activeTiles[round+1]
 //  cardSelect = Math.floor(Math.random()*(1,deck.length)-1)
 //  nextTile.textContent = deck[cardSelect]
-    activeTile.textContent = "1"
+    activeTile.textContent = "A"
 //  deck=deck.splice(1,cardSelect)
     nextTile.dataset.state = "active"
 }
