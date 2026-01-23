@@ -108,7 +108,7 @@ function stopInteraction() {
 }
 
 function handleMouseClick(e) {
-  showAlert("click", 5000)
+
   if (e.target.matches("[hitKey]")) {
 //	hitKey.classList.add("press")
     pressKey()
@@ -137,7 +137,8 @@ function pressKey() {
 	offsetFromDate = new Date(2025, 3, 1)
 	msOffset = Date.now() - offsetFromDate
 	dayOffset = msOffset / 1000 / 60 / 60 / 12
-	cardSelect = deck[Math.floor(dayOffset)]
+	cardSelect = Math.floor(dayOffset)
+    showAlert(cardselect, 5000)
 	//cardSelect = Math.random()*(1,deck.length)-1
     activeTile.textContent = deck[cardSelect]
     deck=deck.splice(1,cardSelect)
