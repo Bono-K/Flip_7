@@ -101,13 +101,13 @@ function stopInteraction() {
 }
 
 function handleMouseClick(e) {
-  if (e.target.matches("[data-hitKey]")) {
+  if (e.target.matches("[hitKey]")) {
     kitKey.classList.add("press")
     pressKey()
     return
   }
 
-//  if (e.target.matches("[data-stayKey]")) {
+//  if (e.target.matches("[stayKey]")) {
 //    submitGuess()
 //    return
 //  }
