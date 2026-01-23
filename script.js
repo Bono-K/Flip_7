@@ -134,10 +134,7 @@ function pressKey() {
 //  const activeTiles = getActiveTiles()
 	const activeTile = guessGrid[round]
 	const nextTile = activeTile[round+1]
-	offsetFromDate = new Date(2025, 3, 1)
-	msOffset = Date.now() - offsetFromDate
-	dayOffset = msOffset / 1000 / 60 / 60 / 12
-	cardSelect = Math.floor(dayOffset)
+	cardSelect = Math.floor(Math.random() * deck.length)
     showAlert(cardSelect, 5000)
     showAlert(deck.length, 5000)	
 	//cardSelect = Math.random()*(1,deck.length)-1
