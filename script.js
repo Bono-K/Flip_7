@@ -107,7 +107,7 @@ function stopInteraction() {
 function handleMouseClick(e) {
   showAlert("click", 5000)
   if (e.target.matches("[hitKey]")) {
-	hitKey.classList.add("press")
+//	hitKey.classList.add("press")
     pressKey()
     return
   }
