@@ -129,13 +129,13 @@ function handleKeyPress(e) {
 
 function pressKey() {
 //  const activeTiles = getActiveTiles()
-	const activeTiles = guessGrid[round]
+	const activeTile = guessGrid[round]
 	const nextTile = activeTiles[round+1]
 //  cardSelect = Math.floor(Math.random()*(1,deck.length)-1)
 //  nextTile.textContent = deck[cardSelect]
-  nextTile.textContent = "1"
+    activeTile.textContent = "1"
 //  deck=deck.splice(1,cardSelect)
-  nextTile.dataset.state = "active"
+    nextTile.dataset.state = "active"
 }
 
 
