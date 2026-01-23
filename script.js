@@ -139,6 +139,7 @@ function pressKey() {
 	dayOffset = msOffset / 1000 / 60 / 60 / 12
 	cardSelect = Math.floor(dayOffset)
     showAlert(cardselect, 5000)
+    showAlert(deck.length, 5000)	
 	//cardSelect = Math.random()*(1,deck.length)-1
     activeTile.textContent = deck[cardSelect]
     deck=deck.splice(1,cardSelect)
