@@ -89,6 +89,8 @@ const FLIP_ANIMATION_DURATION = 500
 const DANCE_ANIMATION_DURATION = 500
 const alertContainer = document.querySelector("[data-alert-container]")
 const guessGrid = document.querySelectorAll(".tile")
+const guessGrid = document.querySelectorAll(".hitKey")
+const guessGrid = document.querySelectorAll(".stayKey")
 
 startInteraction()
 
