@@ -182,6 +182,14 @@ body {
   user-select: none;
 }
 
+.nextKey:hover, .hitKey:focus {
+  --lightness-offset: 10%;
+
+.nextKey > svg {
+  width: 1.75em;
+  height: 1.75em;
+  pointer-events: none;
+}
 
 
   
