@@ -131,7 +131,7 @@ function pressKey() {
 //  const activeTiles = getActiveTiles()
 	const activeTile = guessGrid[round]
 	const nextTile = activeTile[round+1]
-    cardSelect = Math.floor(Math.random()*(1,deck.length)-1)
+    cardSelect = Math.random()*(1,deck.length)-1
     activeTile.textContent = deck[cardSelect]
     deck=deck.splice(1,cardSelect)
     round = round + 1
