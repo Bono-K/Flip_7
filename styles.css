@@ -95,7 +95,7 @@ body {
   align-content: center;
   flex-grow: 1;
   grid-template-columns: repeat(7, 4em);
-  grid-template-rows: repeat(1, 4em);
+  grid-template-rows: repeat(3, 4em);
   gap: .25em;
   margin-bottom: 1.5em;
 }
