@@ -137,7 +137,7 @@ function pressKey() {
 
 
 
-stopInteraction()
+//stopInteraction()
 
 
 
