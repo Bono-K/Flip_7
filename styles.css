@@ -127,6 +127,11 @@ body {
   user-select: none;
 }
 
+
+.hitKey[data-state="press"] {
+  background-color: hsl(216deg 70.59% 45.55%);
+}
+
 .stayKey {
   grid-column: span 3;
   font-size: inherit;
@@ -144,9 +149,6 @@ body {
   user-select: none;
 }
 
-.tile.win-lose {
-  font-size: 0em;
-}
 
 .tile[data-state="active"] {
   border-color: hsl(200, 1%, 34%);
