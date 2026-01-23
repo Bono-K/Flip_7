@@ -135,7 +135,7 @@ function pressKey() {
 //  nextTile.textContent = deck[cardSelect]
     activeTile.textContent = "A"
 //  deck=deck.splice(1,cardSelect)
-    nextTile.dataset.state = "active"
+    round = round + 1
 }
 
 
