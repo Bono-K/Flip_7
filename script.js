@@ -139,7 +139,7 @@ function pressKey() {
     showAlert(deck.length, 5000)	
 	//cardSelect = Math.random()*(1,deck.length)-1
     activeTile.textContent = deck[cardSelect]
-    deck=deck.splice(cardSelect,1)
+    deck.splice(cardSelect,1)
     round = round + 1
 }
 
