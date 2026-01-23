@@ -17,14 +17,12 @@
 </head>
 
 
-<div class = "container">
-  <div class = "column1">
-    <div>guess-grid</div>
-  </div>
-  <div class = "column2">
-    <div>keyboard</div>
-  </div>
-</div>
+.container {
+  display: flex;
+}  
+<div class="container">
+  <div>guess-grid</div>
+  <div>keyboard</div>
 
 
   
@@ -32,6 +30,7 @@
   <div class="alert-container" data-alert-container></div>
 
   <div data-guess-grid class="guess-grid">
+    <div class="tile"></div>
     <div class="tile"></div>
     <div class="tile"></div>
     <div class="tile"></div>
