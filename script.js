@@ -142,9 +142,9 @@ stopInteraction()
 
 
 function getActiveTiles() {
-  return guessGrid.querySelectorAll('[data-state="active"]')
+  return guessGrid.querySelectorAll('.tile[data-state="active"]')
 }
 
 function getAllTiles() {
-  return guessGrid.querySelectorAll()
+  return guessGrid.querySelectorAll(".tile")
 }
