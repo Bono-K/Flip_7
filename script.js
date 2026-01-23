@@ -102,6 +102,7 @@ function stopInteraction() {
 
 function handleMouseClick(e) {
   if (e.target.matches("hitKey")) {
+    kitKey.classList.add("press")
     pressKey()
     return
   }
@@ -125,7 +126,7 @@ function pressKey() {
 
 
 
-//	stopInteraction()
+stopInteraction()
 
 
 
