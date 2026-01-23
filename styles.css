@@ -128,7 +128,7 @@ body {
 }
 
 
-.hitKey[data-state="press"] {
+.hitKey.press {
   background-color: hsl(216deg 70.59% 45.55%);
 }
 
