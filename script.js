@@ -128,8 +128,9 @@ function handleKeyPress(e) {
 
 
 function pressKey() {
-  const activeTiles = getActiveTiles()
-  const nextTile = guessGrid.querySelector(":not([data-letter])")
+//  const activeTiles = getActiveTiles()
+	const activeTiles = guessGrid
+	const nextTile = guessGrid.querySelector(":not([data-letter])")
 //  cardSelect = Math.floor(Math.random()*(1,deck.length)-1)
 //  nextTile.textContent = deck[cardSelect]
   nextTile.textContent = "1"
@@ -145,9 +146,9 @@ function pressKey() {
 
 
 
-function getActiveTiles() {
-  return guessGrid.querySelectorAll('[data-state="active"]')
-}
+//function getActiveTiles() {
+//  return guessGrid.querySelectorAll('[data-state="active"]')
+//}
 
 function getAllTiles() {
   return guessGrid.querySelectorAll(".tile")
