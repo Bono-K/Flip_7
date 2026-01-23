@@ -116,9 +116,10 @@ function handleMouseClick(e) {
 function pressKey() {
   const activeTiles = getActiveTiles()
   const nextTile = guessGrid.querySelector(":not([data-letter])")
-  cardSelect = Math.floor(Math.random()*(1,deck.length)-1)
-  nextTile.textContent = deck[cardSelect]
-  deck=deck.splice(1,cardSelect)
+//  cardSelect = Math.floor(Math.random()*(1,deck.length)-1)
+//  nextTile.textContent = deck[cardSelect]
+  nextTile.textContent = "1"
+//  deck=deck.splice(1,cardSelect)
   nextTile.dataset.state = "active"
 }
 
