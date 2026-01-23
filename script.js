@@ -127,3 +127,13 @@ function pressKey() {
 	stopInteraction()
 
 
+
+
+
+function getActiveTiles() {
+  return guessGrid.querySelectorAll('[data-state="active"]')
+}
+
+function getAllTiles() {
+  return guessGrid.querySelectorAll()
+}
