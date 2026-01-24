@@ -148,10 +148,10 @@ function pressKey() {
 
 }
 
-if activePlayer = keyboard.length/7{
+if activePlayer = keyboard.length/7 {
 	round = round + 1
 	activePlayer = 0
-
+}
 
 //stopInteraction()
 
