@@ -89,7 +89,7 @@ let deck = [
 	"12",
 	"12"
 ];
-if (keyboard.length>78) {
+if (keyboard.length>deck.length) {
 	deck.flatMap(i => [i,i])
 }
 	
