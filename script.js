@@ -92,13 +92,14 @@ const stayKey = document.querySelectorAll(".stayKey")
 const keyboard = document.querySelectorAll(".key")
 const sums = document.querySelectorAll(".sum")
 
-function buildDeck(){
+function buildDeck(keyboard){
 	if (keyboard.length>deck.length) {
 		deck.flatMap(i => [i,i])
 	}
+	return
 }	
 
-buildDeck()
+buildDeck(keyboard)
 
 
 
