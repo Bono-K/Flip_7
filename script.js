@@ -91,10 +91,13 @@ const alertContainer = document.querySelector("[data-alert-container]")
 const guessGrid = document.querySelectorAll(".tile")
 const hitKey = document.querySelectorAll(".hitKey")
 const stayKey = document.querySelectorAll(".stayKey")
+const keyboard = document.querySelectorAll(".key")
+const sums = document.querySelectorAll(".sum")
 
 
 
 let round = 0
+let activePlayer=0
 startInteraction()
 
 function startInteraction() {
@@ -131,18 +134,23 @@ function handleKeyPress(e) {
 
 
 function pressKey() {
-//  const activeTiles = getActiveTiles()
+
 	const activeTile = guessGrid[round]
-	const nextTile = activeTile[round+1]
+	const activeKey = keyboard[activePlayer*7+round]
+//	const nextTile = activeTile[round+1]
 	cardSelect = Math.floor(Math.random() * deck.length)
     showAlert(cardSelect, 5000)
     showAlert(deck.length, 5000)	
-	//cardSelect = Math.random()*(1,deck.length)-1
     activeTile.textContent = deck[cardSelect]
-    deck.splice(cardSelect,1)
-    round = round + 1
+    activeKey.textContent = deck[cardSelect]
+	activePlayer = activePlayer + 1
+	deck.splice(cardSelect,1)
+
 }
 
+if activePlayer = keyboard.length/7{
+	round = round + 1
+	activePlayer = 0
 
 
 //stopInteraction()
