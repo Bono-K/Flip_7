@@ -1,11 +1,3 @@
-const FLIP_ANIMATION_DURATION = 500
-const DANCE_ANIMATION_DURATION = 500
-const alertContainer = document.querySelector("[data-alert-container]")
-const guessGrid = document.querySelectorAll(".tile")
-const hitKey = document.querySelectorAll(".hitKey")
-const stayKey = document.querySelectorAll(".stayKey")
-const keyboard = document.querySelectorAll(".key")
-const sums = document.querySelectorAll(".sum")
 
 
 let deck = [
@@ -88,18 +80,25 @@ let deck = [
 	"12",
 	"12",
 	"12"
-];
-if (keyboard.length>deck.length) {
-	deck.flatMap(i => [i,i])
-}
-	
-
-//const winMessages = [
+]
 
 
+function buildVars() {
+	const FLIP_ANIMATION_DURATION = 500
+	const DANCE_ANIMATION_DURATION = 500
+	const alertContainer = document.querySelector("[data-alert-container]")
+	const guessGrid = document.querySelectorAll(".tile")
+	const hitKey = document.querySelectorAll(".hitKey")
+	const stayKey = document.querySelectorAll(".stayKey")
+	const keyboard = document.querySelectorAll(".key")
+	const sums = document.querySelectorAll(".sum")
 
-// const WORD_LENGTH = 5
+	if (keyboard.length>deck.length) {
+		deck.flatMap(i => [i,i])
+	}
+}	
 
+buildVars()
 
 
 
