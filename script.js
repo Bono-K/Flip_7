@@ -146,12 +146,12 @@ function pressKey() {
 	activePlayer = activePlayer + 1
 	deck.splice(cardSelect,1)
 
+	if (activePlayer == keyboard.length/7) {
+		round = round + 1
+		activePlayer = 0
+	}
 }
 
-if (activePlayer == keyboard.length/7) {
-	round = round + 1
-	activePlayer = 0
-}
 
 //stopInteraction()
 
