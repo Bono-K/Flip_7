@@ -99,7 +99,10 @@ const sums = document.querySelectorAll(".sum")
 let round = 0
 let activePlayer=0
 startInteraction()
-
+if (keyboard.length>78) {
+	deck.flatMap(i => [i,i])
+}
+	
 function startInteraction() {
   document.addEventListener("click", handleMouseClick)
   document.addEventListener("keydown", handleKeyPress)
@@ -126,6 +129,7 @@ function handleMouseClick(e) {
 }
 function handleKeyPress(e) {
    showAlert("key", 5000)
+   showAlert(deck.length, 5000)	
    if (e.key.match(/^[a-z]$/)) {
     pressKey(e.key)
     return
