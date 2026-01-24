@@ -139,8 +139,6 @@ function pressKey() {
 	const activeKey = keyboard[activePlayer*7+round]
 //	const nextTile = activeTile[round+1]
 	cardSelect = Math.floor(Math.random() * deck.length)
-    showAlert(cardSelect, 5000)
-    showAlert(deck.length, 5000)	
     activeTile.textContent = deck[cardSelect]
     activeKey.textContent = deck[cardSelect]
 	activePlayer = activePlayer + 1
