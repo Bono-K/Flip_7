@@ -112,12 +112,7 @@ startInteraction()
 
 function startInteraction() {
   showAlert(activePlayer, 5000)	
-  if (stayPlayers.length > 0) {
-	if (stayPlayers.inlcudes(activePlayer)) {
-	  activePlayer = activePlayer + 1
-	  return
-	}
-  }
+
   document.addEventListener("click", handleMouseClick)
   document.addEventListener("keydown", handleKeyPress)
 }
@@ -176,6 +171,13 @@ function pressKey() {
 	if (activePlayer == keyboard.length/7) {
 		round = round + 1
 		activePlayer = 0
+	}
+    if (stayPlayers.length > 0) {
+	  if (stayPlayers.inlcudes(activePlayer)) {
+	    activePlayer = activePlayer + 1
+	    return
+	  }
+    
 	}
 }
 
