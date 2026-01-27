@@ -111,9 +111,11 @@ let activePlayer=0
 startInteraction()
 
 function startInteraction() {
-  if (stayPlayers.inlcudes(activePlayer)) {
+  if (stayPlayers.length > 0) {
+	if (stayPlayers.inlcudes(activePlayer)) {
 	  activePlayer = activePlayer + 1
 	  return
+	}
   }
   document.addEventListener("click", handleMouseClick)
   document.addEventListener("keydown", handleKeyPress)
