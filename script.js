@@ -150,15 +150,19 @@ function pressKey() {
 	const activeTile = guessGrid[round]
 	const activeSum = sums[round]
 	const activeKey = keyboard[activePlayer*7+round]
-	const playerKeys = keyboard.slice(0,7)
 //	const nextTile = activeTile[round+1]
 	cardSelect = Math.floor(Math.random() * deck.length)
     activeTile.textContent = deck[cardSelect]
     activeKey.textContent = deck[cardSelect]
 	let roundSum = 0
-	for (const keyVal of playerKeys) {
-		roundSum = roundSum + keyVal.textContent
-	}
+    roundSum = roundSum+keyboard[activePlayer*7].textContent
+    roundSum = roundSum+keyboard[activePlayer*7+1].textContent
+    roundSum = roundSum+keyboard[activePlayer*7+2].textContent
+    roundSum = roundSum+keyboard[activePlayer*7+3].textContent
+    roundSum = roundSum+keyboard[activePlayer*7+4].textContent
+    roundSum = roundSum+keyboard[activePlayer*7+5].textContent
+    roundSum = roundSum+keyboard[activePlayer*7+6].textContent
+	
 	activeSum.textContent = roundSum
 	activePlayer = activePlayer + 1
 	deck.splice(cardSelect,1)
