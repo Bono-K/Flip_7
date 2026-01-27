@@ -111,7 +111,7 @@ let activePlayer=0
 startInteraction()
 
 function startInteraction() {
-  if stayPlayers.inlcudes(activePlayer){
+  if (stayPlayers.inlcudes(activePlayer)) {
 	  activePlayer = activePlayer + 1
 	  return
   }
