@@ -173,8 +173,6 @@ function pressStay() {
 	stayPlayers.push(activePlayer)
     playerChange()
 	    return
-    }
-    
 }
 
 funtion playerChange() {
