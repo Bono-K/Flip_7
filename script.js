@@ -182,8 +182,8 @@ function playerChange() {
 		activePlayer = 0
 	}
 	if (stayPlayers.length > 0) {
-	  isMatch=stayPlayers.indexOf(activePlayer)
-	  if (isMatch>=0) {
+	  //isMatch=stayPlayers.indexOf(activePlayer)
+	  while (stayPlayers.indexOf(activePlayer)>=0) {
 	    activePlayer = activePlayer + 1
 	  }	
 	}
