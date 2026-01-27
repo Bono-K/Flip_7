@@ -194,6 +194,7 @@ function playerChange() {
 	guessGrid[round+4]=keyboard[activePlayer*7+4].textContent	
 	guessGrid[round+5]=keyboard[activePlayer*7+5].textContent	
 	guessGrid[round+6]=keyboard[activePlayer*7+6].textContent	
+	return
 }
 
 		
