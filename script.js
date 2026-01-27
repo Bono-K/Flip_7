@@ -155,9 +155,9 @@ function pressKey() {
 	cardSelect = Math.floor(Math.random() * deck.length)
     activeTile.textContent = deck[cardSelect]
     activeKey.textContent = deck[cardSelect]
-    sumRound()
+    roundSum = sumRound()
 	
-	activeSum.textContent = sumRound()
+	activeSum.textContent = roundSum
 	deck.splice(cardSelect,1)
     playerChange()
 	return
@@ -177,6 +177,9 @@ function pressStay() {
 
 function playerChange() {
 	activePlayer = activePlayer + 1
+	if (activePlayer > keyboard.length/7){
+		activePlayer = 0
+	}
 	if (stayPlayers.length > 0) {
 	  isMatch=stayPlayers.indexOf(activePlayer)
 	  if (isMatch>=0) {
