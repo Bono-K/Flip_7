@@ -82,7 +82,7 @@ let baseDeck = [
 	"12"
 ]
 
-
+const stayPlayers = []
 const FLIP_ANIMATION_DURATION = 500
 const DANCE_ANIMATION_DURATION = 500
 const alertContainer = document.querySelector("[data-alert-container]")
@@ -111,6 +111,10 @@ let activePlayer=0
 startInteraction()
 
 function startInteraction() {
+  if stayPlayers.inlcudes(activePlayer){
+	  activePlayer = activePlayer + 1
+	  return
+  }
   document.addEventListener("click", handleMouseClick)
   document.addEventListener("keydown", handleKeyPress)
 }
@@ -121,17 +125,16 @@ function stopInteraction() {
 }
 
 function handleMouseClick(e) {
-
   if (e.target.matches("[hitKey]")) {
 //	hitKey.classList.add("press")
     pressKey()
     return
   }
 
-//  if (e.target.matches("[stayKey]")) {
-//    submitGuess()
-//    return
-//  }
+  if (e.target.matches("[stayKey]")) {
+    pressStay()
+    return
+  }
 
 }
 function handleKeyPress(e) {
@@ -176,9 +179,9 @@ function pressKey() {
 
 //stopInteraction()
 
-
-
-
+function pressStay() {
+	stayPlayers.push(activePlayer)
+}
 
 
 
