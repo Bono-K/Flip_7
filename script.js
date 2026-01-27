@@ -155,31 +155,13 @@ function pressKey() {
 	cardSelect = Math.floor(Math.random() * deck.length)
     activeTile.textContent = deck[cardSelect]
     activeKey.textContent = deck[cardSelect]
-	let roundSum = 0
-    roundSum = roundSum+Number(keyboard[activePlayer*7].textContent)
-    roundSum = roundSum+Number(keyboard[activePlayer*7+1].textContent)
-    roundSum = roundSum+Number(keyboard[activePlayer*7+2].textContent)
-    roundSum = roundSum+Number(keyboard[activePlayer*7+3].textContent)
-    roundSum = roundSum+Number(keyboard[activePlayer*7+4].textContent)
-    roundSum = roundSum+Number(keyboard[activePlayer*7+5].textContent)
-    roundSum = roundSum+Number(keyboard[activePlayer*7+6].textContent)
+    sumRound()
 	
 	activeSum.textContent = roundSum
-	activePlayer = activePlayer + 1
 	deck.splice(cardSelect,1)
-
-	if (activePlayer == keyboard.length/7) {
-		round = round + 1
-		activePlayer = 0
-	}
-    if (stayPlayers.length > 0) {
-	  isMatch=stayPlayers.indexOf(activePlayer)
-	  if (isMatch>=0) {
-	    activePlayer = activePlayer + 1
-	    return
-	  }
-    
-	}
+    playerChange()
+	return
+	  
 }
 
 
@@ -189,17 +171,41 @@ function pressStay() {
     showAlert("Stay Press", 5000)
     showAlert(stayPlayers, 5000)	
 	stayPlayers.push(activePlayer)
-	activePlayer = activePlayer + 1
-	if (stayPlayers.length > 0) {
-	  isMatch=stayPlayers.indexOf(activePlayer)
-	  if (isMatch>=0) {
-	    activePlayer = activePlayer + 1
+    playerChange()
 	    return
     }
     
 }
 
+funtion playerChange() {
+	activePlayer = activePlayer + 1
+	if (stayPlayers.length > 0) {
+	  isMatch=stayPlayers.indexOf(activePlayer)
+	  if (isMatch>=0) {
+	    activePlayer = activePlayer + 1
+	  }	
+	}
+	guessGrid[round]=keyboard[activePlayer*7].textContent
+	guessGrid[round+1]=keyboard[activePlayer*7+1].textContent	
+	guessGrid[round+2]=keyboard[activePlayer*7+2].textContent		
+	guessGrid[round+3]=keyboard[activePlayer*7+3].textContent	
+	guessGrid[round+4]=keyboard[activePlayer*7+4].textContent	
+	guessGrid[round+5]=keyboard[activePlayer*7+5].textContent	
+	guessGrid[round+6]=keyboard[activePlayer*7+6].textContent	
+}
 
+		
+function sumRound() {
+	let roundSum = 0
+    roundSum = roundSum+Number(keyboard[activePlayer*7].textContent)
+    roundSum = roundSum+Number(keyboard[activePlayer*7+1].textContent)
+    roundSum = roundSum+Number(keyboard[activePlayer*7+2].textContent)
+    roundSum = roundSum+Number(keyboard[activePlayer*7+3].textContent)
+    roundSum = roundSum+Number(keyboard[activePlayer*7+4].textContent)
+    roundSum = roundSum+Number(keyboard[activePlayer*7+5].textContent)
+    roundSum = roundSum+Number(keyboard[activePlayer*7+6].textContent)
+	return
+}
 
 function showAlert(message, duration = 1000) {
   const alert = document.createElement("div")
