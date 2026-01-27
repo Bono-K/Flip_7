@@ -189,6 +189,7 @@ function pressStay() {
     showAlert("Stay Press", 5000)
     showAlert(stayPlayers, 5000)	
 	stayPlayers.push(activePlayer)
+	activePlayer = activePlayer + 1
 }
 
 
