@@ -173,7 +173,8 @@ function pressKey() {
 		activePlayer = 0
 	}
     if (stayPlayers.length > 0) {
-	  if (stayPlayers.find(activePlayer)>-1) {
+	  isMatch=stayPlayers.indexOf(activePlayer)
+	  if (isMatch>=0) {
 	    activePlayer = activePlayer + 1
 	    return
 	  }
