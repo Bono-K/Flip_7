@@ -175,7 +175,7 @@ function pressStay() {
 	    return
 }
 
-funtion playerChange() {
+function playerChange() {
 	activePlayer = activePlayer + 1
 	if (stayPlayers.length > 0) {
 	  isMatch=stayPlayers.indexOf(activePlayer)
