@@ -190,6 +190,13 @@ function pressStay() {
     showAlert(stayPlayers, 5000)	
 	stayPlayers.push(activePlayer)
 	activePlayer = activePlayer + 1
+	if (stayPlayers.length > 0) {
+	  isMatch=stayPlayers.indexOf(activePlayer)
+	  if (isMatch>=0) {
+	    activePlayer = activePlayer + 1
+	    return
+    }
+    
 }
 
 
