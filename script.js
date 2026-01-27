@@ -1,6 +1,6 @@
 
 
-let deck = [
+let baseDeck = [
 	"0",
 	"1",
 	"2",
@@ -93,8 +93,8 @@ const keyboard = document.querySelectorAll(".key")
 const sums = document.querySelectorAll(".sum")
 
 function buildDeck(keyboard){
-	if (keyboard.length>deck.length) {
-		deck.flatMap(i => [i,i])
+	if (keyboard.length>baseDeck.length) {
+		deck = baseDeck.flatMap(i => [i,i])
 	}
 	return
 }	
