@@ -111,6 +111,7 @@ let activePlayer=0
 startInteraction()
 
 function startInteraction() {
+  showAlert(activePlayer, 5000)	
   if (stayPlayers.length > 0) {
 	if (stayPlayers.inlcudes(activePlayer)) {
 	  activePlayer = activePlayer + 1
