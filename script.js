@@ -156,7 +156,7 @@ function pressKey() {
     activeTile.textContent = deck[cardSelect]
     activeKey.textContent = deck[cardSelect]
     roundSum = sumRound()
-	
+    showAlert(roundSum, 5000)	
 	activeSum.textContent = roundSum
 	deck.splice(cardSelect,1)
     playerChange()
