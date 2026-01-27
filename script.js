@@ -148,11 +148,17 @@ function handleKeyPress(e) {
 function pressKey() {
 
 	const activeTile = guessGrid[round]
+	const activeSum = sum[round]
 	const activeKey = keyboard[activePlayer*7+round]
 //	const nextTile = activeTile[round+1]
 	cardSelect = Math.floor(Math.random() * deck.length)
     activeTile.textContent = deck[cardSelect]
     activeKey.textContent = deck[cardSelect]
+	let roundSum = 0
+	for (const keyVal of keyboard[activePlayer*7:((activePlayer*7)+7)]) {
+		roundSum = roundSum + keyVal.textContent
+	}
+	activeSum.textContent = roundSum
 	activePlayer = activePlayer + 1
 	deck.splice(cardSelect,1)
 
