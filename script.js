@@ -155,7 +155,7 @@ function pressKey() {
     activeTile.textContent = deck[cardSelect]
     activeKey.textContent = deck[cardSelect]
 	let roundSum = 0
-	for (const keyVal of keyboard[activePlayer*7:((activePlayer*7)+7)]) {
+	for (const keyVal of keyboard.slice(activePlayer*7,((activePlayer*7)+7))) {
 		roundSum = roundSum + keyVal.textContent
 	}
 	activeSum.textContent = roundSum
