@@ -182,6 +182,8 @@ function pressKey() {
 //stopInteraction()
 
 function pressStay() {
+    showAlert("Stay Press", 5000)
+    showAlert(stayPlayers, 5000)	
 	stayPlayers.push(activePlayer)
 }
 
