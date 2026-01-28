@@ -174,17 +174,6 @@ function pressStay() {
 }
 
 function playerChange() {
-	activePlayer = activePlayer + 1
-	if (activePlayer == keyboard.length/7) {
-		round = round + 1
-		activePlayer = 0
-	}
-	if (stayPlayers.length > 0) {
-	  //isMatch=stayPlayers.indexOf(activePlayer)
-	  while (stayPlayers.indexOf(activePlayer)>=0) {
-	    activePlayer = activePlayer + 1
-	  }	
-	}
 	guessGrid[0].textContent=keyboard[activePlayer*7].textContent
 	guessGrid[1].textContent=keyboard[activePlayer*7+1].textContent	
 	guessGrid[2].textContent=keyboard[activePlayer*7+2].textContent		
@@ -202,6 +191,17 @@ function playerChange() {
     roundSum = roundSum+Number(keyboard[activePlayer*7+6].textContent)
 	const activeSum = sums[activePlayer]	
 	activeSum.textContent = roundSum
+	activePlayer = activePlayer + 1
+	if (activePlayer == keyboard.length/7) {
+		round = round + 1
+		activePlayer = 0
+	}
+	if (stayPlayers.length > 0) {
+	  //isMatch=stayPlayers.indexOf(activePlayer)
+	  while (stayPlayers.indexOf(activePlayer)>=0) {
+	    activePlayer = activePlayer + 1
+	  }	
+	}
 	return
 }
 
