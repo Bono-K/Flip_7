@@ -250,14 +250,25 @@ function bust() {
 		showAlert(revertArray.length, 5000)
 		showAlert(round, 5000)
 		showAlert("Busted", 5000)
-		keyboard[activePlayer*7].classList.add("bust")
-		keyboard[activePlayer*7+1].classList.add("bust")
-		keyboard[activePlayer*7+2].classList.add("bust")
-		keyboard[activePlayer*7+3].classList.add("bust")
-		keyboard[activePlayer*7+4].classList.add("bust")
-		keyboard[activePlayer*7+5].classList.add("bust")
-		keyboard[activePlayer*7+6].classList.add("bust")
+		activeTileStatusUpdate (keyboard, add, "bust")
+//		keyboard[activePlayer*7].classList.add("bust")
+//		keyboard[activePlayer*7+1].classList.add("bust")
+//		keyboard[activePlayer*7+2].classList.add("bust")
+//		keyboard[activePlayer*7+3].classList.add("bust")
+//		keyboard[activePlayer*7+4].classList.add("bust")
+//		keyboard[activePlayer*7+5].classList.add("bust")
+//		keyboard[activePlayer*7+6].classList.add("bust")
 		sums[activePlayer].classList.add("bust")
 	}
 	return
 }
+
+
+function activeTileStatusUpdate (divType, action, status) {
+		divType[activePlayer*7].classList.action(status)
+		divType[activePlayer*7+1].classList.action(status)
+		divType[activePlayer*7+2].classList.action(status)
+		divType[activePlayer*7+3].classList.action(status)
+		divType[activePlayer*7+4].classList.action(status)
+		divType[activePlayer*7+5].classList.action(status)
+		divType[activePlayer*7+6].classList.action(status)	
