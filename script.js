@@ -193,8 +193,8 @@ function playerChange() {
 		}
 		activePlayer = 0
 	}
-	if (stayPlayers.length = playerCount) {
-		stopInteraction()
+	//if (stayPlayers.length = playerCount) {
+	//	stopInteraction()
 	}
 	if (stayPlayers.length > 0) {
 	  //isMatch=stayPlayers.indexOf(activePlayer)
