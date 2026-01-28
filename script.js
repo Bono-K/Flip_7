@@ -162,11 +162,18 @@ function pressKey() {
 }
 
 
-//stopInteraction()
+stopInteraction()
 
 function pressStay() {	
 	stayPlayers.push(activePlayer)
+	sums[activePlayer].classList.add("stay")		
 	keyboard[activePlayer*7].classList.add("stay")	
+	keyboard[activePlayer*7+1].classList.add("stay")	
+	keyboard[activePlayer*7+2].classList.add("stay")	
+	keyboard[activePlayer*7+3].classList.add("stay")	
+	keyboard[activePlayer*7+4].classList.add("stay")	
+	keyboard[activePlayer*7+5].classList.add("stay")	
+	keyboard[activePlayer*7+6].classList.add("stay")	
     playerChange()
 	    return
 }
@@ -244,6 +251,13 @@ function bust() {
 		showAlert(round, 5000)
 		showAlert("Busted", 5000)
 		keyboard[activePlayer*7].classList.add("bust")
+		keyboard[activePlayer*7+1].classList.add("bust")
+		keyboard[activePlayer*7+2].classList.add("bust")
+		keyboard[activePlayer*7+3].classList.add("bust")
+		keyboard[activePlayer*7+4].classList.add("bust")
+		keyboard[activePlayer*7+5].classList.add("bust")
+		keyboard[activePlayer*7+6].classList.add("bust")
+		activeSum[activePlayer].classList.add("bust")
 	}
 	return
 }
