@@ -237,7 +237,7 @@ function bust() {
 	let setCheck = new Set(checkArray)
 	if (setCheck.length !== round+1) {
 		stayPlayers.push(activePlayer)
-		showAlert(guessGrid[6].textContent, 5000)
+		showAlert(Number(guessGrid[0].textContent, 5000))
 		showAlert(checkArray.length, 5000)
 		showAlert("Busted", 5000)	
     	playerChange()
