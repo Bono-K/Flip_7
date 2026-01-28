@@ -186,7 +186,7 @@ function playerChange() {
 	const activeSum = sums[activePlayer]	
 	activeSum.textContent = roundSum
 	activePlayer = activePlayer + 1
-	if (activePlayer == playerCount) {
+	if (activePlayer = playerCount) {
 		round = round + 1
 		if (round = 7) {
 			stopInteraction()
