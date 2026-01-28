@@ -250,7 +250,7 @@ function bust() {
 		showAlert(revertArray.length, 5000)
 		showAlert(round, 5000)
 		showAlert("Busted", 5000)
-		activeTileStatusUpdate (keyboard, add, "bust")
+		activeTileStatusUpdate (keyboard, "add", "bust")
 //		keyboard[activePlayer*7].classList.add("bust")
 //		keyboard[activePlayer*7+1].classList.add("bust")
 //		keyboard[activePlayer*7+2].classList.add("bust")
