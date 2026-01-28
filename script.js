@@ -166,6 +166,7 @@ function pressKey() {
 
 function pressStay() {	
 	stayPlayers.push(activePlayer)
+	keyboard[activePlayer*7]('[data-state="stay"]')	
     playerChange()
 	    return
 }
