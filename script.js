@@ -94,10 +94,10 @@ const sums = document.querySelectorAll(".sum")
 
 function buildDeck(keyboard){
 	if (keyboard.length>baseDeck.length) {
-		const deck = baseDeck.flatMap(i => [i,i])
+		deck = baseDeck.flatMap(i => [i,i])
 	}
 	else {
-		const deck = baseDeck
+		deck = baseDeck
 	}
 	return
 }	
