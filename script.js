@@ -188,6 +188,9 @@ function playerChange() {
 	activePlayer = activePlayer + 1
 	if (activePlayer == keyboard.length/7) {
 		round = round + 1
+		if (round == 7) {
+			stopInteraction()
+		}
 		activePlayer = 0
 	}
 	if (stayPlayers.length > 0) {
