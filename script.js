@@ -242,7 +242,6 @@ function bust() {
 		showAlert(revertArray.length, 5000)
 		showAlert(round, 5000)
 		showAlert("Busted", 5000)	
-    	playerChange()
 	}
 	return
 }
