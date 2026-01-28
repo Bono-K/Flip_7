@@ -188,9 +188,9 @@ function playerChange() {
 	activePlayer = activePlayer + 1
 	if (activePlayer = playerCount) {
 		round = round + 1
-		if (round = 7) {
-			stopInteraction()
-		}
+//		if (round = 7) {
+//			stopInteraction()
+//		}
 		activePlayer = 0
 	}
 	//if (stayPlayers.length = playerCount) {
