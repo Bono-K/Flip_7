@@ -238,7 +238,8 @@ function bust() {
 	if (setCheck.length !== round+1) {
 		stayPlayers.push(activePlayer)
 		showAlert(setCheck.length, 5000)
-	    showAlert("Busted", 5000)	
+		showAlert(checkArray.length, 5000)
+		showAlert("Busted", 5000)	
     	playerChange()
 	}
 	return
