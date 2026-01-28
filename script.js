@@ -192,15 +192,6 @@ function playerChange() {
 	guessGrid[4].textContent=keyboard[activePlayer*7+4].textContent	
 	guessGrid[5].textContent=keyboard[activePlayer*7+5].textContent	
 	guessGrid[6].textContent=keyboard[activePlayer*7+6].textContent	
-    sumRound()
-    showAlert(roundSum, 5000)	
-	const activeSum = sums[activePlayer]	
-	activeSum.textContent = roundSum
-	return
-}
-
-		
-function sumRound() {
 	let roundSum = 0
     roundSum = roundSum+Number(keyboard[activePlayer*7].textContent)
     roundSum = roundSum+Number(keyboard[activePlayer*7+1].textContent)
@@ -209,8 +200,13 @@ function sumRound() {
     roundSum = roundSum+Number(keyboard[activePlayer*7+4].textContent)
     roundSum = roundSum+Number(keyboard[activePlayer*7+5].textContent)
     roundSum = roundSum+Number(keyboard[activePlayer*7+6].textContent)
+	const activeSum = sums[activePlayer]	
+	activeSum.textContent = roundSum
 	return
 }
+
+		
+
 
 function showAlert(message, duration = 1000) {
   const alert = document.createElement("div")
