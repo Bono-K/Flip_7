@@ -250,7 +250,7 @@ function bust() {
 		showAlert(revertArray.length, 5000)
 		showAlert(round, 5000)
 		showAlert("Busted", 5000)
-		activeTileStatusUpdate (keyboard, "add", "bust")
+		addStatusUpdate (keyboard, "bust")
 //		keyboard[activePlayer*7].classList.add("bust")
 //		keyboard[activePlayer*7+1].classList.add("bust")
 //		keyboard[activePlayer*7+2].classList.add("bust")
@@ -264,12 +264,23 @@ function bust() {
 }
 
 
-function activeTileStatusUpdate (divType, action, status) {
-		divType[activePlayer*7].classList.action(status)
-		divType[activePlayer*7+1].classList.action(status)
-		divType[activePlayer*7+2].classList.action(status)
-		divType[activePlayer*7+3].classList.action(status)
-		divType[activePlayer*7+4].classList.action(status)
-		divType[activePlayer*7+5].classList.action(status)
-		divType[activePlayer*7+6].classList.action(status)	
+function addStatusUpdate (divType, status) {
+		divType[activePlayer*7].classList.add(status)
+		divType[activePlayer*7+1].classList.add(status)
+		divType[activePlayer*7+2].classList.add(status)
+		divType[activePlayer*7+3].classList.add(status)
+		divType[activePlayer*7+4].classList.add(status)
+		divType[activePlayer*7+5].classList.add(status)
+		divType[activePlayer*7+6].classList.add(status)	
 }
+
+function removeStatusUpdate (divType, status) {
+		divType[activePlayer*7].classList.remove(status)
+		divType[activePlayer*7+1].classList.remove(status)
+		divType[activePlayer*7+2].classList.remove(status)
+		divType[activePlayer*7+3].classList.remove(status)
+		divType[activePlayer*7+4].classList.remove(status)
+		divType[activePlayer*7+5].classList.remove(status)
+		divType[activePlayer*7+6].classList.remove(status)	
+}
+
