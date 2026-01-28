@@ -96,6 +96,7 @@ body {
 
 
 .key.active {
+  --lightness: 75%;
   border-color: hsl(200, 1%, 99%);
 }
 
