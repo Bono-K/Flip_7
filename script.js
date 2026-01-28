@@ -192,7 +192,7 @@ function playerChange() {
 	guessGrid[4].textContent=keyboard[activePlayer*7+4].textContent	
 	guessGrid[5].textContent=keyboard[activePlayer*7+5].textContent	
 	guessGrid[6].textContent=keyboard[activePlayer*7+6].textContent	
-    roundSum = sumRound()
+    sumRound()
     showAlert(roundSum, 5000)	
 	const activeSum = sums[activePlayer]	
 	activeSum.textContent = roundSum
