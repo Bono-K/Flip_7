@@ -237,7 +237,7 @@ function bust() {
 	let setCheck = new Set(checkArray)
 	if (setCheck.length !== round+1) {
 		stayPlayers.push(activePlayer)
-		showAlert(activePlayer, 5000)
+		showAlert(setCheck, 5000)
 	    showAlert("Busted", 5000)	
     	playerChange()
 	}
