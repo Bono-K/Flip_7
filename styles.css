@@ -19,7 +19,6 @@ body {
 
 .keyboard {
   display: grid;
-  justify-content: right;
   align-content: center;
   flex-grow: 1;
   grid-template-columns: repeat(8, 2em);
@@ -108,7 +107,6 @@ body {
 
 .guess-grid {
   display: grid;
-  justify-content: left-center;
   align-content: center;
   flex-grow: 1;
   grid-template-columns: repeat(7, 4em);
