@@ -227,13 +227,13 @@ function showAlert(message, duration = 1000) {
 
 function bust() {
 	let checkArray = []
-	checkArray.push(guessGrid[0].textContent)
-	checkArray.push(guessGrid[1].textContent)
-	checkArray.push(guessGrid[2].textContent)
-	checkArray.push(guessGrid[3].textContent)
-	checkArray.push(guessGrid[4].textContent)	
-	checkArray.push(guessGrid[5].textContent)
-	checkArray.push(guessGrid[6].textContent)	
+	checkArray.push(Number(guessGrid[0].textContent))
+	checkArray.push(Number(guessGrid[1].textContent))
+	checkArray.push(Number(guessGrid[2].textContent))
+	checkArray.push(Number(guessGrid[3].textContent))
+	checkArray.push(Number(guessGrid[4].textContent))	
+	checkArray.push(Number(guessGrid[5].textContent))
+	checkArray.push(Number(guessGrid[6].textContent))	
 	let setCheck = new Set(checkArray)
 	if (setCheck.length !== round+1) {
 		stayPlayers.push(activePlayer)
