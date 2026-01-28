@@ -185,7 +185,7 @@ function playerChange() {
     roundSum = roundSum+Number(keyboard[activePlayer*7+6].textContent)
 	const activeSum = sums[activePlayer]	
 	activeSum.textContent = roundSum
-	activePlayer == activePlayer + 1
+	activePlayer = activePlayer + 1
 	if (activePlayer == playerCount) {
 		round = round + 1
 		activePlayer = 0
@@ -193,13 +193,13 @@ function playerChange() {
 	if (stayPlayers.length > 0) {
 	  //isMatch=stayPlayers.indexOf(activePlayer)
 	  while (stayPlayers.indexOf(activePlayer)>=0) {
-	    activePlayer == activePlayer + 1
+	    activePlayer = activePlayer + 1
 		if (activePlayer == playerCount) {
-		  round == round + 1
-		  activePlayer == 0
+		  round = round + 1
+		  activePlayer = 0
 	    }  
-	  }
-	}	
+	  }	
+	}
 	addStatusUpdate (keyboard, "active")
 	sums[activePlayer].classList.add("active")
 	guessGrid[0].textContent=keyboard[activePlayer*7].textContent
@@ -211,6 +211,7 @@ function playerChange() {
 	guessGrid[6].textContent=keyboard[activePlayer*7+6].textContent	
 	return
 }
+
 
 		
 
