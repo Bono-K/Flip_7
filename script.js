@@ -185,18 +185,18 @@ function playerChange() {
     roundSum = roundSum+Number(keyboard[activePlayer*7+6].textContent)
 	const activeSum = sums[activePlayer]	
 	activeSum.textContent = roundSum
-	activePlayer = activePlayer + 1
-	if (activePlayer = playerCount) {
+	activePlayer == activePlayer + 1
+	if (activePlayer == playerCount) {
 		round = round + 1
 		activePlayer = 0
 	}
 	if (stayPlayers.length > 0) {
 	  //isMatch=stayPlayers.indexOf(activePlayer)
 	  while (stayPlayers.indexOf(activePlayer)>=0) {
-	    activePlayer = activePlayer + 1
+	    activePlayer == activePlayer + 1
 		if (activePlayer == playerCount) {
-		  round = round + 1
-		  activePlayer = 0
+		  round == round + 1
+		  activePlayer == 0
 	    }  
 	  }
 	}	
