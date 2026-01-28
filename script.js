@@ -111,8 +111,6 @@ let activePlayer=0
 startInteraction()
 
 function startInteraction() {
-  showAlert(activePlayer, 5000)	
-
   document.addEventListener("click", handleMouseClick)
   document.addEventListener("keydown", handleKeyPress)
 }
@@ -165,9 +163,7 @@ function pressKey() {
 
 //stopInteraction()
 
-function pressStay() {
-    showAlert("Stay Press", 5000)
-    showAlert(stayPlayers, 5000)	
+function pressStay() {	
 	stayPlayers.push(activePlayer)
     playerChange()
 	    return
@@ -228,3 +224,20 @@ function showAlert(message, duration = 1000) {
   }, duration)
 }
 
+function bust() {
+	let checkArray = []
+	checkArray.push(guessGrid[0].textContent)
+	checkArray.push(guessGrid[1].textContent)
+	checkArray.push(guessGrid[2].textContent)
+	checkArray.push(guessGrid[3].textContent)
+	checkArray.push(guessGrid[4].textContent)	
+	checkArray.push(guessGrid[5].textContent)
+	checkArray.push(guessGrid[6].textContent)	
+	let setCheck = Set(checkArray)
+	if (setCheck.length !== round) {
+		stayPlayers.push(activePlayer)
+		showAlert(activePlayer, 5000)
+	    showAlert("Busted", 5000)	
+    	playerChange()
+	}
+}
