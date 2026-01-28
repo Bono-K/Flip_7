@@ -185,13 +185,13 @@ function playerChange() {
 	    activePlayer = activePlayer + 1
 	  }	
 	}
-	guessGrid[round]=keyboard[activePlayer*7].textContent
-	guessGrid[round+1]=keyboard[activePlayer*7+1].textContent	
-	guessGrid[round+2]=keyboard[activePlayer*7+2].textContent		
-	guessGrid[round+3]=keyboard[activePlayer*7+3].textContent	
-	guessGrid[round+4]=keyboard[activePlayer*7+4].textContent	
-	guessGrid[round+5]=keyboard[activePlayer*7+5].textContent	
-	guessGrid[round+6]=keyboard[activePlayer*7+6].textContent	
+	guessGrid[0].textContent=keyboard[activePlayer*7].textContent
+	guessGrid[1].textContent=keyboard[activePlayer*7+1].textContent	
+	guessGrid[2].textContent=keyboard[activePlayer*7+2].textContent		
+	guessGrid[3].textContent=keyboard[activePlayer*7+3].textContent	
+	guessGrid[4].textContent=keyboard[activePlayer*7+4].textContent	
+	guessGrid[5].textContent=keyboard[activePlayer*7+5].textContent	
+	guessGrid[6].textContent=keyboard[activePlayer*7+6].textContent	
     roundSum = sumRound()
     showAlert(roundSum, 5000)	
 	const activeSum = sums[activePlayer]	
