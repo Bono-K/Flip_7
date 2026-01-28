@@ -166,7 +166,7 @@ function pressKey() {
 
 function pressStay() {	
 	stayPlayers.push(activePlayer)
-	keyboard[activePlayer*7]('[data-state="stay"]')	
+	keyboard[activePlayer*7].classList.add("stay")	
     playerChange()
 	    return
 }
@@ -243,7 +243,7 @@ function bust() {
 		showAlert(revertArray.length, 5000)
 		showAlert(round, 5000)
 		showAlert("Busted", 5000)
-		keyboard[activePlayer*7]('[data-state="bust"]')
+		keyboard[activePlayer*7].classList.add("bust")
 	}
 	return
 }
