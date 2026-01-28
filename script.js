@@ -174,13 +174,7 @@ function pressStay() {
 }
 
 function playerChange() {
-	guessGrid[0].textContent=keyboard[activePlayer*7].textContent
-	guessGrid[1].textContent=keyboard[activePlayer*7+1].textContent	
-	guessGrid[2].textContent=keyboard[activePlayer*7+2].textContent		
-	guessGrid[3].textContent=keyboard[activePlayer*7+3].textContent	
-	guessGrid[4].textContent=keyboard[activePlayer*7+4].textContent	
-	guessGrid[5].textContent=keyboard[activePlayer*7+5].textContent	
-	guessGrid[6].textContent=keyboard[activePlayer*7+6].textContent	
+
 	let roundSum = 0
     roundSum = roundSum+Number(keyboard[activePlayer*7].textContent)
     roundSum = roundSum+Number(keyboard[activePlayer*7+1].textContent)
@@ -202,6 +196,13 @@ function playerChange() {
 	    activePlayer = activePlayer + 1
 	  }	
 	}
+	guessGrid[0].textContent=keyboard[activePlayer*7].textContent
+	guessGrid[1].textContent=keyboard[activePlayer*7+1].textContent	
+	guessGrid[2].textContent=keyboard[activePlayer*7+2].textContent		
+	guessGrid[3].textContent=keyboard[activePlayer*7+3].textContent	
+	guessGrid[4].textContent=keyboard[activePlayer*7+4].textContent	
+	guessGrid[5].textContent=keyboard[activePlayer*7+5].textContent	
+	guessGrid[6].textContent=keyboard[activePlayer*7+6].textContent	
 	return
 }
 
