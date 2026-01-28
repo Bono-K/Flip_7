@@ -91,6 +91,7 @@ const hitKey = document.querySelectorAll(".hitKey")
 const stayKey = document.querySelectorAll(".stayKey")
 const keyboard = document.querySelectorAll(".key")
 const sums = document.querySelectorAll(".sum")
+const playerCount = keyboard.length/7
 
 function buildDeck(keyboard){
 	if (keyboard.length>baseDeck.length) {
@@ -186,7 +187,7 @@ function playerChange() {
 	const activeSum = sums[activePlayer]	
 	activeSum.textContent = roundSum
 	activePlayer = activePlayer + 1
-	if (activePlayer == keyboard.length/7) {
+	if (activePlayer == playerCount) {
 		round = round + 1
 		if (round == 7) {
 			stopInteraction()
@@ -197,7 +198,7 @@ function playerChange() {
 	  //isMatch=stayPlayers.indexOf(activePlayer)
 	  while (stayPlayers.indexOf(activePlayer)>=0) {
 	    activePlayer = activePlayer + 1
-		if (activePlayer == keyboard.length/7) {
+		if (activePlayer == playerCount) {
 		  round = round + 1
 		  activePlayer = 0
 	    }  
