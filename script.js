@@ -239,14 +239,11 @@ function bust() {
 	checkArray.push(Number(guessGrid[4].textContent))	
 	checkArray.push(Number(guessGrid[5].textContent))
 	checkArray.push(Number(guessGrid[6].textContent))	
+	checkArray.push(0)	
 	let setCheck = new Set(checkArray)
 	let revertArray = Array.from(setCheck)
 	if (revertArray.length !== round+2) {
 		stayPlayers.push(activePlayer)
-		showAlert(Number(guessGrid[0].textContent, 5000))
-		showAlert(revertArray.length, 5000)
-		showAlert(round, 5000)
-		showAlert("Busted", 5000)
 		addStatusUpdate (keyboard, "bust")
 		sums[activePlayer].classList.add("bust")
 	}
