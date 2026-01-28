@@ -69,7 +69,16 @@ body {
   pointer-events: none;
 }
 
+.key.bust {
+  --lightness: 23%;
+}
 
+
+.key.stay {
+  --hue: 115;
+  --saturation: 29%;
+  --lightness: 43%;
+}
 
 .guess-grid {
   display: grid;
