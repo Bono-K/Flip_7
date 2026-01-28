@@ -163,7 +163,6 @@ function pressKey() {
 }
 
 
-//stopInteraction()
 
 function pressStay() {	
 	stayPlayers.push(activePlayer)
@@ -189,10 +188,13 @@ function playerChange() {
 	activePlayer = activePlayer + 1
 	if (activePlayer == playerCount) {
 		round = round + 1
-		if (round == 7) {
+		if (round = 7) {
 			stopInteraction()
 		}
 		activePlayer = 0
+	}
+	if (stayPlayers.length = playerCount) {
+		stopInteraction()
 	}
 	if (stayPlayers.length > 0) {
 	  //isMatch=stayPlayers.indexOf(activePlayer)
