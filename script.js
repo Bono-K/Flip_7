@@ -153,7 +153,8 @@ function pressKey() {
 	cardSelect = Math.floor(Math.random() * deck.length)
     activeTile.textContent = deck[cardSelect]
     activeKey.textContent = deck[cardSelect]
-
+	activeTile.textContent = deck[cardSelect]
+    bust()
 	deck.splice(cardSelect,1)
     playerChange()
 	return
@@ -240,4 +241,5 @@ function bust() {
 	    showAlert("Busted", 5000)	
     	playerChange()
 	}
+	return
 }
