@@ -173,6 +173,7 @@ function pressStay() {
 }
 
 function playerChange() {
+	removeStatusUpdate (sum, "active")
 	removeStatusUpdate (keyboard, "active")
 	let roundSum = 0
     roundSum = roundSum+Number(keyboard[activePlayer*7].textContent)
@@ -200,6 +201,7 @@ function playerChange() {
 	  }	
 	}
 	addStatusUpdate (keyboard, "active")
+	addStatusUpdate (sum, "active")
 	guessGrid[0].textContent=keyboard[activePlayer*7].textContent
 	guessGrid[1].textContent=keyboard[activePlayer*7+1].textContent	
 	guessGrid[2].textContent=keyboard[activePlayer*7+2].textContent		
