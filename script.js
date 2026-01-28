@@ -236,7 +236,7 @@ function bust() {
 	checkArray.push(Number(guessGrid[6].textContent))	
 	let setCheck = new Set(checkArray)
 	let revertArray = Array.from(setCheck)
-	if (revertArray.length !== round) {
+	if (revertArray.length !== round+2) {
 		stayPlayers.push(activePlayer)
 		showAlert(Number(guessGrid[0].textContent, 5000))
 		showAlert(revertArray.length, 5000)
