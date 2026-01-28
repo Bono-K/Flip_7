@@ -162,7 +162,7 @@ function pressKey() {
 }
 
 
-stopInteraction()
+//stopInteraction()
 
 function pressStay() {	
 	stayPlayers.push(activePlayer)
