@@ -272,3 +272,4 @@ function activeTileStatusUpdate (divType, action, status) {
 		divType[activePlayer*7+4].classList.action(status)
 		divType[activePlayer*7+5].classList.action(status)
 		divType[activePlayer*7+6].classList.action(status)	
+}
