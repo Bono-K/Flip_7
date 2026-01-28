@@ -241,7 +241,8 @@ function bust() {
 		showAlert(Number(guessGrid[0].textContent, 5000))
 		showAlert(revertArray.length, 5000)
 		showAlert(round, 5000)
-		showAlert("Busted", 5000)	
+		showAlert("Busted", 5000)
+		keyboard[activePlayer*7]('[data-state="bust"]')
 	}
 	return
 }
