@@ -257,7 +257,7 @@ function bust() {
 		keyboard[activePlayer*7+4].classList.add("bust")
 		keyboard[activePlayer*7+5].classList.add("bust")
 		keyboard[activePlayer*7+6].classList.add("bust")
-		activeSum[activePlayer].classList.add("bust")
+		sums[activePlayer].classList.add("bust")
 	}
 	return
 }
