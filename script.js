@@ -195,7 +195,7 @@ function playerChange() {
 	}
 	//if (stayPlayers.length = playerCount) {
 	//	stopInteraction()
-	}
+	//}
 	if (stayPlayers.length > 0) {
 	  //isMatch=stayPlayers.indexOf(activePlayer)
 	  while (stayPlayers.indexOf(activePlayer)>=0) {
@@ -204,8 +204,8 @@ function playerChange() {
 		  round = round + 1
 		  activePlayer = 0
 	    }  
-	  }	
-	}
+	  }
+	}	
 	addStatusUpdate (keyboard, "active")
 	sums[activePlayer].classList.add("active")
 	guessGrid[0].textContent=keyboard[activePlayer*7].textContent
