@@ -248,12 +248,12 @@ function bust() {
 	let revertArray = Array.from(setCheck)
 	if (revertArray.length !== round+2) {
 		stayPlayers.push(activePlayer)
+		addStatusUpdate (keyboard, "bust")
+		sums[activePlayer].classList.add("bust")
 		if (stayPlayers.length = playerCount) {
 			return
 		}
-		addStatusUpdate (keyboard, "bust")
-		sums[activePlayer].classList.add("bust")
-  		stopInteraction()
+		stopInteraction()
 		setTimeout(() => {
 			startInteraction()
   			}, 500)	
