@@ -155,9 +155,10 @@ function pressKey() {
     activeTile.textContent = deck[cardSelect]
     activeKey.textContent = deck[cardSelect]
 	activeTile.textContent = deck[cardSelect]
-    bust()
 	deck.splice(cardSelect,1)
-    playerChange()
+    bust()
+	setTimeout(() => , 1000)	
+	playerChange()
 	return
 	  
 }
