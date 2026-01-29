@@ -157,7 +157,6 @@ function pressKey() {
 	activeTile.textContent = deck[cardSelect]
 	deck.splice(cardSelect,1)
     bust()
-	setTimeout(() => 1000)	
 	playerChange()
 	return
 	  
@@ -248,7 +247,10 @@ function bust() {
 		stayPlayers.push(activePlayer)
 		addStatusUpdate (keyboard, "bust")
 		sums[activePlayer].classList.add("bust")
-	}
+  		setTimeout(() => {
+    			sums[activePlayer].classList.add("bust")
+  			}, 500)		
+		}
 	return
 }
 
