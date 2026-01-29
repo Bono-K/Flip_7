@@ -51,7 +51,7 @@ body {
   display: grid;
   align-content: center;
   flex-grow: 1;
-  grid-template-columns: repeat(8, 2.5em);
+  grid-template-columns: repeat(8, 2em);
   grid-template-rows: repeat(15, 2em);
   gap: .25em;
   margin-bottom: 1.5em;
