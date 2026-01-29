@@ -49,14 +49,14 @@ body {
   display: grid;
   align-content: center;
   flex-grow: 1;
-  grid-template-columns: repeat(8, 3em);
-  grid-template-rows: repeat(15, 3em);
+  grid-template-columns: repeat(8, 2.5em);
+  grid-template-rows: repeat(15, 2.5em);
   gap: .25em;
   margin-bottom: 1.5em;
 }
 
 .sum {
-  font-size: 1em;
+  font-size: 1.5em;
   color: white;
   background-color: hsl(
     var(--hue, 200),
@@ -96,7 +96,7 @@ body {
 
 
 .key {
-  font-size: 1em;
+  font-size: 1.5em;
   color: white;
   background-color: hsl(
     var(--hue, 200),
