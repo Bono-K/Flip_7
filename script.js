@@ -248,8 +248,9 @@ function bust() {
 		addStatusUpdate (keyboard, "bust")
 		sums[activePlayer].classList.add("bust")
   		setTimeout(() => {
-    			sums[activePlayer].classList.add("bust")
-  			}, 500)		
+    			stopInteraction()
+  			}, 500)	
+		startInteraction()
 		}
 	return
 }
