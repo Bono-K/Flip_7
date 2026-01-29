@@ -168,7 +168,10 @@ function pressStay() {
 	stayPlayers.push(activePlayer)
 	sums[activePlayer].classList.add("stay")		
 	addStatusUpdate (keyboard, "stay")
-    playerChange()
+	if (stayPlayers.length = playerCount) {
+			stopInteraction()
+	}
+	playerChange()
 	    return
 }
 
@@ -245,6 +248,9 @@ function bust() {
 	let revertArray = Array.from(setCheck)
 	if (revertArray.length !== round+2) {
 		stayPlayers.push(activePlayer)
+		if (stayPlayers.length = playerCount) {
+			stopInteraction()
+		}
 		addStatusUpdate (keyboard, "bust")
 		sums[activePlayer].classList.add("bust")
   		stopInteraction()
