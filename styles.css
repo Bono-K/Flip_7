@@ -19,13 +19,14 @@ body {
 
 .player-select {
   display: grid;
-  align-content: center;
-  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
   grid-template-columns: repeat(16, 2em);
   grid-template-rows: repeat(1, 2em);
   gap: .25em;
   margin-bottom: 1.5em;
 }
+
 .selectKey {
   font-size: 1em;
   color: white;
@@ -43,7 +44,6 @@ body {
   user-select: none;
   transition: transform 250ms linear;
 }
-
 
 .keyboard {
   display: grid;
