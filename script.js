@@ -168,9 +168,9 @@ function pressStay() {
 	stayPlayers.push(activePlayer)
 	sums[activePlayer].classList.add("stay")		
 	addStatusUpdate (keyboard, "stay")
-	if (stayPlayers.length = playerCount) {
-			return
-	}
+//	if (stayPlayers.length = playerCount) {
+//			return
+//	}
 	playerChange()
 	    return
 }
@@ -250,9 +250,9 @@ function bust() {
 		stayPlayers.push(activePlayer)
 		addStatusUpdate (keyboard, "bust")
 		sums[activePlayer].classList.add("bust")
-		if (stayPlayers.length = playerCount) {
-			return
-		}
+//		if (stayPlayers.length = playerCount) {
+//			return
+//		}
 		stopInteraction()
 		setTimeout(() => {
 			startInteraction()
