@@ -157,7 +157,7 @@ function pressKey() {
 	activeTile.textContent = deck[cardSelect]
 	deck.splice(cardSelect,1)
     bust()
-	setTimeout(() => , 1000)	
+	setTimeout(() => 1000)	
 	playerChange()
 	return
 	  
