@@ -17,6 +17,16 @@ body {
   font-size: clamp(.5rem, 2.5vmin, 1.5rem);
 }
 
+.player-select {
+  display: grid;
+  align-content: center;
+  flex-grow: 1;
+  grid-template-columns: repeat(16, 2em);
+  grid-template-rows: repeat(1, 2em);
+  gap: .25em;
+  margin-bottom: 1.5em;
+}
+
 .keyboard {
   display: grid;
   align-content: center;
