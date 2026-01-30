@@ -48,7 +48,7 @@ body {
 }
 
 
-.player-select.inactive {
+.selectKey.inactive {
   grid-template-columns: repeat(0, 0em);
   grid-template-rows: repeat(0, 0em);
   pointer-events: none
