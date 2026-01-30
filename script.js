@@ -127,14 +127,7 @@ function stopInteraction() {
 
 function handleMouseClick(e) {
   if (e.target.matches("[data-select]")) {
-    const playerCount = Number(e.target.textContent)
-	showAlert("select", 5000)	
-    showAlert(typeof playerCount, 5000)	
-    showAlert(playerCount, 5000)		  
-	playerSelect[0].classList.add("inactive")
-	hitKey[0].classList.add("active")
-	stayKey[0].classList.add("active")
-	buildDeck(keyboard)
+    assignPlayers(e)
 	return
   }
 	
@@ -150,6 +143,20 @@ function handleMouseClick(e) {
   }
 
 }
+
+function assignPlayers(e) {
+    const playerCount = Number(e.target.textContent)
+	showAlert("select", 5000)	
+    showAlert(typeof playerCount, 5000)	
+    showAlert(playerCount, 5000)		  
+	playerSelect[0].classList.add("inactive")
+	hitKey[0].classList.add("active")
+	stayKey[0].classList.add("active")
+	buildDeck(keyboard)
+	return
+}
+
+
 function handleKeyPress(e) {
     showAlert(deck.length, 5000)	   
 	if (e.key.match(/^[a-z]$/)) {
