@@ -150,25 +150,10 @@ function handleMouseClick(e) {
 function assignPlayers(e) {
     const playerCount = Number(e.target.textContent)
 	emptyTile[0].textContent=playerCount
-	showAlert("select", 5000)	
-    showAlert(typeof playerCount, 5000)	
-    showAlert(playerCount, 5000)		  
-	selectKeys[0].classList.add("inactive")
-	selectKeys[1].classList.add("inactive")	
-	selectKeys[2].classList.add("inactive")
-	selectKeys[3].classList.add("inactive")
-	selectKeys[4].classList.add("inactive")
-	selectKeys[5].classList.add("inactive")
-	selectKeys[6].classList.add("inactive")
-	selectKeys[7].classList.add("inactive")
-	selectKeys[8].classList.add("inactive")
-	selectKeys[9].classList.add("inactive")	
-	selectKeys[10].classList.add("inactive")
-	selectKeys[11].classList.add("inactive")
-	selectKeys[12].classList.add("inactive")
-	selectKeys[13].classList.add("inactive")
-	selectKeys[14].classList.add("inactive")	
-	selectKeys[15].classList.add("inactive")	
+	if (playerCount < 16) {
+	for (let i=0; i<16,i++) {
+		selectKeys[i].classList.add("inactive")
+	}
 	hitKey[0].classList.add("active")
 	stayKey[0].classList.add("active")
 	buildDeck(keyboard)
@@ -208,7 +193,7 @@ function pressKey() {
 function pressStay() {	
 	stayPlayers.push(activePlayer)
 	sums[activePlayer].classList.add("stay")		
-	addStatusUpdate (keyboard, "stay")
+	addStatusUpdate (keyboard, "stay", activePlayer)
 //	if (stayPlayers.length = playerCount) {
 //			return
 //	}
@@ -219,7 +204,7 @@ function pressStay() {
 function playerChange() {
     playerCount=Number(emptyTile[0].textContent)
 	sums[activePlayer].classList.remove("active")
-	removeStatusUpdate (keyboard, "active")
+	removeStatusUpdate (keyboard, "active", activePlayer)
 	let roundSum = 0
     roundSum = roundSum+Number(keyboard[activePlayer*7].textContent)
     roundSum = roundSum+Number(keyboard[activePlayer*7+1].textContent)
@@ -245,7 +230,7 @@ function playerChange() {
 	    }  
 	  }	
 	}
-	addStatusUpdate (keyboard, "active")
+	addStatusUpdate (keyboard, "active", activePlayer)
 	sums[activePlayer].classList.add("active")
 	guessGrid[0].textContent=keyboard[activePlayer*7].textContent
 	guessGrid[1].textContent=keyboard[activePlayer*7+1].textContent	
@@ -291,7 +276,7 @@ function bust() {
 	let revertArray = Array.from(setCheck)
 	if (revertArray.length !== round+2) {
 		stayPlayers.push(activePlayer)
-		addStatusUpdate (keyboard, "bust")
+		addStatusUpdate (keyboard, "bust", activePlayer)
 		sums[activePlayer].classList.add("bust")
 //		if (stayPlayers.length = playerCount) {
 //			return
@@ -306,7 +291,7 @@ function bust() {
 }
 
 
-function addStatusUpdate (divType, status) {
+function addStatusUpdate (divType, status, activePlayer) {
 		divType[activePlayer*7].classList.add(status)
 		divType[activePlayer*7+1].classList.add(status)
 		divType[activePlayer*7+2].classList.add(status)
@@ -316,7 +301,7 @@ function addStatusUpdate (divType, status) {
 		divType[activePlayer*7+6].classList.add(status)	
 }
 
-function removeStatusUpdate (divType, status) {
+function removeStatusUpdate (divType, status, activePlayer) {
 		divType[activePlayer*7].classList.remove(status)
 		divType[activePlayer*7+1].classList.remove(status)
 		divType[activePlayer*7+2].classList.remove(status)
