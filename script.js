@@ -131,8 +131,9 @@ function handleMouseClick(e) {
   if (e.target.matches("[selectKey]")) {
     const playerCount = e.textContent
 	showAlert(e.stayKey, 5000)	
-    showAlert(playerCount, 5000)	
-    playerSelect[0].classList.add("inactive")
+    showAlert(e.target.dataset.stayKey, 5000)	
+    showAlert(playerCount, 5000)		  
+	playerSelect[0].classList.add("inactive")
 	hitKey[0].classList.add("active")
 	stayKey[0].classList.add("active")
 	return
