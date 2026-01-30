@@ -145,7 +145,8 @@ function handleMouseClick(e) {
 }
 
 function assignPlayers(e) {
-    const playerCount = Number(e.target.textContent)
+    const count = Number(e.target.textContent)
+	const playerCount = count
 	showAlert("select", 5000)	
     showAlert(typeof playerCount, 5000)	
     showAlert(playerCount, 5000)		  
