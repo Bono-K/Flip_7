@@ -46,6 +46,8 @@ body {
   cursor: pointer;
   user-select: none;  
 }
+
+
 .player-select.inactive {
   grid-template-columns: repeat(0, 0em);
   grid-template-rows: repeat(0, 0em);
@@ -186,19 +188,26 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: hsl(108.92deg 61.11% 43.34%);
-  color: white;
-  fill: hsl(108.92deg 61.11% 43.34%);
+
   text-transform: uppercase;
   border-radius: .25em;
-  cursor: pointer;
-  user-select: none;
+
 }
 
 
 .hitKey.press {
   background-color: hsl(216deg 70.59% 45.55%);
 }
+
+.hitKey.active {
+  background-color: hsl(108.92deg 61.11% 43.34%);
+  color: white;
+  fill: hsl(108.92deg 61.11% 43.34%);
+  cursor: pointer;
+  user-select: none;
+}
+
+
 
 .stayKey {
   grid-column: span 3;
@@ -208,11 +217,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-transform: uppercase;
+  border-radius: .25em;
+}
+
+.stayKey.active {
   background-color: hsl(216deg 70.59% 45.55%);
   color: white;
   fill: hsl(216deg 70.59% 45.55%);
-  text-transform: uppercase;
-  border-radius: .25em;
   cursor: pointer;
   user-select: none;
 }
