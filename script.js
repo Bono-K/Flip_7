@@ -154,6 +154,7 @@ function assignPlayers(e) {
 	for (let i=0; i<16; i++) {
 		selectKeys[i].classList.add("inactive")
 	}
+	}
 	hitKey[0].classList.add("active")
 	stayKey[0].classList.add("active")
 	buildDeck(keyboard)
