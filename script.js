@@ -107,8 +107,6 @@ function buildDeck(keyboard){
 	return
 }	
 
-buildDeck(keyboard)
-
 
 
 
@@ -136,6 +134,7 @@ function handleMouseClick(e) {
 	//playerSelect[0].classList.add("inactive")
 	hitKey[0].classList.add("active")
 	stayKey[0].classList.add("active")
+	buildDeck(keyboard)
 	return
   }
 	
