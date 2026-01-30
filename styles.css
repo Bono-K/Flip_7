@@ -51,16 +51,8 @@ body {
 .selectKey.inactive {
   grid-template-columns: repeat(0, 0em);
   grid-template-rows: repeat(0, 0em);
-  color: hsl(
-    var(--hue, 200),
-    var(--saturation, 1%),
-    calc(var(--lightness-offset, 0%) + var(--lightness, 51%))
-  );
-  background-color: hsl(
-    var(--hue, 200),
-    var(--saturation, 1%),
-    calc(var(--lightness-offset, 0%) + var(--lightness, 51%))
-  );
+  color: hsl(240deg 2.86% 6.86%);
+  background-color: hsl(240deg 2.86% 6.86%);
   pointer-events: none
 }
 
