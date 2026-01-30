@@ -131,8 +131,8 @@ function handleMouseClick(e) {
   if (e.target.matches("[selectKey]")) {
     const playerCount = Number(e.textContent)
     playerSelect[0].classList.add("inactive")
-	hitkey[0].classList.add("active")
-	staykey[0].classList.add("active")
+	hitKey[0].classList.add("active")
+	stayKey[0].classList.add("active")
 	return
   }
 	
