@@ -207,10 +207,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-
   text-transform: uppercase;
   border-radius: .25em;
-
 }
 
 
@@ -231,6 +229,7 @@ body {
 .stayKey {
   grid-column: span 3;
   font-size: inherit;
+  grid-column: span 3;
   border: none;
   padding: 0;
   display: flex;
@@ -238,7 +237,6 @@ body {
   align-items: center;
   text-transform: uppercase;
   border-radius: .25em;
-  pointer-events: none
 }
 
 .stayKey.active {
