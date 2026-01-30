@@ -229,6 +229,7 @@ body {
   align-items: center;
   text-transform: uppercase;
   border-radius: .25em;
+  pointer-events: none
 }
 
 .stayKey.active {
