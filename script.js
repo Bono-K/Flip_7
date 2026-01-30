@@ -129,9 +129,9 @@ function stopInteraction() {
 
 function handleMouseClick(e) {
   if (e.target.matches("[data-select]")) {
-    const playerCount = e.target.dataset.stayKey
+    const playerCount = e.target.textContent
 	showAlert("select", 5000)	
-    showAlert(e.target.textContent, 5000)	
+    //showAlert(e.target.textContent, 5000)	
     showAlert(playerCount, 5000)		  
 	//playerSelect[0].classList.add("inactive")
 	hitKey[0].classList.add("active")
