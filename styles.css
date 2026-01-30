@@ -44,6 +44,10 @@ body {
   user-select: none;
   transition: transform 250ms linear;
 }
+.player-select.inactive {
+  grid-template-columns: repeat(0, 0em);
+  grid-template-rows: repeat(0, 0em);
+}
 
 .keyboard {
   display: grid;
