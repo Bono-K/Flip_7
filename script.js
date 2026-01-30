@@ -158,7 +158,7 @@ function assignPlayers(e) {
 
 
 function handleKeyPress(e) {
-    showAlert(deck.length, 5000)	   
+    showAlert(playerCount, 5000)	   
 	if (e.key.match(/^[a-z]$/)) {
     pressKey(e.key)
     return
