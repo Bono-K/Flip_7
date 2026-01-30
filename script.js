@@ -151,9 +151,9 @@ function assignPlayers(e) {
     const playerCount = Number(e.target.textContent)
 	emptyTile[0].textContent=playerCount
 	if (playerCount < 16) {
-	for (let i=0; i<16; i++) {
-		selectKeys[i].classList.add("inactive")
-	}
+		for (let i=0; i<16; i++) {
+			selectKeys[i].classList.add("inactive")
+		}
 	}
 	hitKey[0].classList.add("active")
 	stayKey[0].classList.add("active")
