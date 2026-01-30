@@ -91,7 +91,11 @@ const hitKey = document.querySelectorAll(".hitKey")
 const stayKey = document.querySelectorAll(".stayKey")
 const keyboard = document.querySelectorAll(".key")
 const sums = document.querySelectorAll(".sum")
-const playerCount = keyboard.length/7
+const playerSelect = document.querySelectorAll(".selectKey")
+
+
+//const playerCount = keyboard.length/7
+
 
 function buildDeck(keyboard){
 	if (keyboard.length>baseDeck.length) {
@@ -107,10 +111,11 @@ buildDeck(keyboard)
 
 
 
+
 let round = 0
 let activePlayer=0
 startInteraction()
-
+selectPlayers(e)
 function startInteraction() {
   document.addEventListener("click", handleMouseClick)
   document.addEventListener("keydown", handleKeyPress)
@@ -120,6 +125,14 @@ function stopInteraction() {
   document.removeEventListener("click", handleMouseClick)
   document.removeEventListener("keydown", handleKeyPress)
 }
+
+
+function selectPlayers(e) {
+  if (e.target.matches("[selectKey]")) {
+    const playerCount = Number(e.textContent)
+    return
+  }
+
 
 function handleMouseClick(e) {
   if (e.target.matches("[hitKey]")) {
