@@ -98,7 +98,7 @@ const selectKeys =document.querySelectorAll(".selectKey")
 
 
 function buildDeck(keyboard){
-	if (keyboard.length>baseDeck.length) {
+	if (playerCount*7>baseDeck.length) {
 		deck = baseDeck.flatMap(i => [i,i])
 	}
 	else {
