@@ -115,7 +115,7 @@ buildDeck(keyboard)
 let round = 0
 let activePlayer=0
 startInteraction()
-selectPlayers(e)
+
 function startInteraction() {
   document.addEventListener("click", handleMouseClick)
   document.addEventListener("keydown", handleKeyPress)
@@ -127,14 +127,13 @@ function stopInteraction() {
 }
 
 
-function selectPlayers(e) {
+function handleMouseClick(e) {
   if (e.target.matches("[selectKey]")) {
     const playerCount = Number(e.textContent)
+    selectKey[0].classList.add(inactive)
     return
   }
-}
-
-function handleMouseClick(e) {
+	
   if (e.target.matches("[hitKey]")) {
 //	hitKey.classList.add("press")
     pressKey()
