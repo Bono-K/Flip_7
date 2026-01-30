@@ -91,7 +91,7 @@ const hitKey = document.querySelectorAll(".hitKey")
 const stayKey = document.querySelectorAll(".stayKey")
 const keyboard = document.querySelectorAll(".key")
 const sums = document.querySelectorAll(".sum")
-const playerSelect = document.querySelector("[data-player-select]")
+const playerSelect =document.querySelectorAll("selectKey")
 
 
 //const playerCount = keyboard.length/7
