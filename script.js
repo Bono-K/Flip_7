@@ -154,7 +154,6 @@ function assignPlayers(e) {
 		for (let i=0; i<16; i++) {
 			selectKeys[i].classList.add("inactive")
 		}
-		let 
 		for (let i=((playerCount*7)+1); i<(keyboard.length+1); i++) {
 			keyboard[i].classList.add("inactive")
 		}
