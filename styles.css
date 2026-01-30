@@ -52,6 +52,7 @@ body {
   grid-template-columns: repeat(0, 0em);
   grid-template-rows: repeat(0, 0em);
   color: hsl(240deg 2.86% 6.86%);
+  border: .05em solid hsl(240deg 2.86% 6.86%);  
   background-color: hsl(240deg 2.86% 6.86%);
   pointer-events: none
 }
@@ -133,7 +134,14 @@ body {
   --lightness: 23%;
 }
 
-
+.key.inactive {
+  grid-template-columns: repeat(0, 0em);
+  grid-template-rows: repeat(0, 0em);
+  color: hsl(240deg 2.86% 6.86%);
+  border: .05em solid hsl(240deg 2.86% 6.86%);  
+  background-color: hsl(240deg 2.86% 6.86%);
+}
+  
 .key.active {
   border-color: hsl(200, 1%, 99%);
 }
