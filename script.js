@@ -130,7 +130,7 @@ function stopInteraction() {
 function handleMouseClick(e) {
   if (e.target.matches("[selectKey]")) {
     const playerCount = Number(e.textContent)
-    selectKey[0].classList.add(inactive)
+    playerSelect[0].classList.add(inactive)
     return
   }
 	
