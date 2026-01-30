@@ -81,7 +81,7 @@ let baseDeck = [
 	"12",
 	"12"
 ]
-
+let playerCount=0
 let stayPlayers = [];
 const FLIP_ANIMATION_DURATION = 500
 const DANCE_ANIMATION_DURATION = 500
