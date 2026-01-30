@@ -132,7 +132,7 @@ function selectPlayers(e) {
     const playerCount = Number(e.textContent)
     return
   }
-
+}
 
 function handleMouseClick(e) {
   if (e.target.matches("[hitKey]")) {
