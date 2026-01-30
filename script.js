@@ -100,6 +100,7 @@ const emptyTile =document.querySelectorAll(".tileEmpty")
 
 
 function buildDeck(keyboard){
+	playerCount=Number(emptyTile[0].textContent)
 	if (playerCount*7>baseDeck.length) {
 		deck = baseDeck.flatMap(i => [i,i])
 	}
