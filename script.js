@@ -129,7 +129,7 @@ function stopInteraction() {
 
 function handleMouseClick(e) {
   if (e.target.matches("[selectKey]")) {
-    const playerCount = e.target.dataset.selectKey
+    const playerCount = e.textContent
 	showAlert(e.stayKey, 5000)	
     showAlert(playerCount, 5000)	
     playerSelect[0].classList.add("inactive")
