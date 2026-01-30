@@ -151,7 +151,7 @@ function handleMouseClick(e) {
 
 }
 function handleKeyPress(e) {
-    showAlert(playerCount, 5000)	   
+    showAlert(deck.length, 5000)	   
 	if (e.key.match(/^[a-z]$/)) {
     pressKey(e.key)
     return
