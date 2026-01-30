@@ -133,7 +133,7 @@ function handleMouseClick(e) {
 	showAlert(e.stayKey, 5000)	
     showAlert(e.target.dataset.stayKey, 5000)	
     showAlert(playerCount, 5000)		  
-	playerSelect[0].classList.add("inactive")
+	//playerSelect[0].classList.add("inactive")
 	hitKey[0].classList.add("active")
 	stayKey[0].classList.add("active")
 	return
