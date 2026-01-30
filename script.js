@@ -157,6 +157,9 @@ function assignPlayers(e) {
 		for (let i=((playerCount*7)); i<(keyboard.length); i++) {
 			keyboard[i].classList.add("inactive")
 		}
+		for (let i=((playerCount)); i<(sums.length); i++) {
+			sums[i].classList.add("inactive")
+		}
 	}
 	hitKey[0].classList.add("active")
 	stayKey[0].classList.add("active")
