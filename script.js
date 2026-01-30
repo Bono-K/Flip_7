@@ -131,7 +131,7 @@ function handleMouseClick(e) {
 	showAlert("select", 5000)	
     showAlert(typeof playerCount, 5000)	
     showAlert(playerCount, 5000)		  
-	//playerSelect[0].classList.add("inactive")
+	playerSelect[0].classList.add("inactive")
 	hitKey[0].classList.add("active")
 	stayKey[0].classList.add("active")
 	buildDeck(keyboard)
