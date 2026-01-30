@@ -91,7 +91,7 @@ const hitKey = document.querySelectorAll(".hitKey")
 const stayKey = document.querySelectorAll(".stayKey")
 const keyboard = document.querySelectorAll(".key")
 const sums = document.querySelectorAll(".sum")
-const playerSelect = document.querySelectorAll(".selectKey")
+const playerSelect = document.querySelector("[data-player-select]")
 
 
 //const playerCount = keyboard.length/7
@@ -129,7 +129,7 @@ function stopInteraction() {
 
 function handleMouseClick(e) {
   if (e.target.matches("[selectKey]")) {
-    const playerCount = e.textContent
+    const playerCount = e.target.dataset.stayKey
 	showAlert(e.stayKey, 5000)	
     showAlert(e.target.dataset.stayKey, 5000)	
     showAlert(playerCount, 5000)		  
