@@ -81,7 +81,7 @@ let baseDeck = [
 	"12",
 	"12"
 ]
-let playerCount=[]
+
 let stayPlayers = [];
 const FLIP_ANIMATION_DURATION = 500
 const DANCE_ANIMATION_DURATION = 500
@@ -92,6 +92,8 @@ const stayKey = document.querySelectorAll(".stayKey")
 const keyboard = document.querySelectorAll(".key")
 const sums = document.querySelectorAll(".sum")
 const selectKeys =document.querySelectorAll(".selectKey")
+const emptyTile =document.querySelectorAll(".tileEmpty")
+
 
 
 //const playerCount = keyboard.length/7
@@ -145,8 +147,8 @@ function handleMouseClick(e) {
 }
 
 function assignPlayers(e) {
-    const count = Number(e.target.textContent)
-	const playerCount = count
+    const playerCount = Number(e.target.textContent)
+	emptyTile[0].textContent=playerCount
 	showAlert("select", 5000)	
     showAlert(typeof playerCount, 5000)	
     showAlert(playerCount, 5000)		  
@@ -159,7 +161,8 @@ function assignPlayers(e) {
 
 
 function handleKeyPress(e) {
-    showAlert(playerCount, 5000)	   
+    playerCount=Number(emptyTile[0].textContent)
+	showAlert(playerCount, 5000)	   
 	if (e.key.match(/^[a-z]$/)) {
     pressKey(e.key)
     return
@@ -198,6 +201,7 @@ function pressStay() {
 }
 
 function playerChange() {
+    playerCount=Number(emptyTile[0].textContent)
 	sums[activePlayer].classList.remove("active")
 	removeStatusUpdate (keyboard, "active")
 	let roundSum = 0
@@ -257,6 +261,7 @@ function showAlert(message, duration = 1000) {
 }
 
 function bust() {
+	playerCount=Number(emptyTile[0].textContent)
 	let checkArray = []
 	checkArray.push(Number(guessGrid[0].textContent))
 	checkArray.push(Number(guessGrid[1].textContent))
