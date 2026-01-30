@@ -91,7 +91,7 @@ const hitKey = document.querySelectorAll(".hitKey")
 const stayKey = document.querySelectorAll(".stayKey")
 const keyboard = document.querySelectorAll(".key")
 const sums = document.querySelectorAll(".sum")
-const playerSelect =document.querySelectorAll("selectKey")
+const selectKeys =document.querySelectorAll(".selectKey")
 
 
 //const playerCount = keyboard.length/7
@@ -149,7 +149,7 @@ function assignPlayers(e) {
 	showAlert("select", 5000)	
     showAlert(typeof playerCount, 5000)	
     showAlert(playerCount, 5000)		  
-	playerSelect[0].classList.add("inactive")
+	selectKeys[0].classList.add("inactive")
 	hitKey[0].classList.add("active")
 	stayKey[0].classList.add("active")
 	buildDeck(keyboard)
