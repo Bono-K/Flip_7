@@ -231,7 +231,7 @@ function playerChange() {
 		showAlert(activePlayer*7+round,5000)
 		showAlert(i, 5000)
 		showAlert(updateAmount, 5000)
-		//keyboard[i].classList.add(keyboard[i].textContent)
+		keyboard[i].classList.add(updateAmount)
 	}
 	activePlayer = activePlayer + 1
 	if (activePlayer == playerCount) {
