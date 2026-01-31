@@ -289,10 +289,10 @@ function bust() {
 		stayPlayers.push(activePlayer)
 		addStatusUpdate (keyboard, "bust", activePlayer)
 		sums[activePlayer].classList.add("bust")
-		if (stayPlayers.length = playerCount) {
+		//if (stayPlayers.length = playerCount) {
 			//stopInteraction()
-			return
-		}
+			//return
+		//}
 		stopInteraction()
 		setTimeout(() => {
 			startInteraction()
