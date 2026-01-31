@@ -93,7 +93,7 @@ const keyboard = document.querySelectorAll(".key")
 const sums = document.querySelectorAll(".sum")
 const selectKeys =document.querySelectorAll(".selectKey")
 const emptyTile =document.querySelectorAll(".tileEmpty")
-
+const emptyBlock = document.querySelectorAll(".tileOneEmpty")
 
 
 //const playerCount = keyboard.length/7
@@ -164,6 +164,7 @@ function assignPlayers(e) {
 	hitKey[0].classList.add("active")
 	stayKey[0].classList.add("active")
 	buildDeck(keyboard)
+	emptyBlock[1].textContent = "Player ${activePlayer}"
 	return
 }
 
@@ -237,6 +238,7 @@ function playerChange() {
 	    }  
 	  }	
 	}
+	emptyBlock[1].textContent = "Player ${activePlayer}"
 	addStatusUpdate (keyboard, "active", activePlayer)
 	sums[activePlayer].classList.add("active")
 	guessGrid[0].textContent=keyboard[activePlayer*7].textContent
