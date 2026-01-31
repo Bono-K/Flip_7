@@ -226,9 +226,9 @@ function playerChange() {
     roundSum = roundSum+Number(keyboard[activePlayer*7+6].textContent)
 	const activeSum = sums[activePlayer]	
 	activeSum.textContent = roundSum
-		for (let i=0; i<round+1; i++) {
-			keyboard[i].classList.add(keyboard[i].textContent)
-		}
+	for (let i=0; activePlayer*7<activePlayer*7+round; i++) {
+		keyboard[i].classList.add(string(keyboard[i].textContent))
+	}
 	activePlayer = activePlayer + 1
 	if (activePlayer == playerCount) {
 		round = round + 1
