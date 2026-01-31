@@ -241,6 +241,9 @@ function playerChange() {
 	}
 	if (stayPlayers.length > 0) {
 	  //isMatch=stayPlayers.indexOf(activePlayer)
+	  if (stayPlayers.length == playerCount) {
+		  return
+	  }
 	  while (stayPlayers.indexOf(activePlayer)>=0) {
 	    activePlayer = activePlayer + 1
 		if (activePlayer == playerCount) {
