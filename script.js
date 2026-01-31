@@ -165,7 +165,7 @@ function assignPlayers(e) {
 	stayKey[0].classList.add("active")
 	buildDeck(keyboard)
 	let displayPlayer = activePlayer+1
-	emptyTile[0].textContent = "Player ${displayPlayer}"
+	emptyTile[0].textContent = "Player " + displayPlayer
 	return
 }
 
@@ -240,7 +240,7 @@ function playerChange() {
 	  }	
 	}
 	let displayPlayer = activePlayer+1
-	emptyTile[0].textContent = "Player ${displayPlayer}"
+	emptyTile[0].textContent =  "Player " + displayPlayer
 	addStatusUpdate (keyboard, "active", activePlayer)
 	sums[activePlayer].classList.add("active")
 	guessGrid[0].textContent=keyboard[activePlayer*7].textContent
