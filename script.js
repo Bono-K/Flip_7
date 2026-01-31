@@ -190,6 +190,8 @@ function pressKey() {
     activeTile.textContent = deck[cardSelect]
     activeKey.textContent = deck[cardSelect]
 	activeTile.textContent = deck[cardSelect]
+	activeKey.classList.add(deck[cardSelect])
+	activeTile.classList.add(deck[cardSelect])
 	deck.splice(cardSelect,1)
     bust()
 	playerChange()
