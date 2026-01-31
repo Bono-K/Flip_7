@@ -100,7 +100,7 @@ const emptyBlock = document.querySelectorAll(".tileOneEmpty")
 
 
 function buildDeck(keyboard){
-	playerCount=Number(emptyTile[0].textContent)
+	playerCount=Number(emptyBlock[1].textContent)
 	if (playerCount*7>baseDeck.length) {
 		deck = baseDeck.flatMap(i => [i,i])
 	}
@@ -149,7 +149,7 @@ function handleMouseClick(e) {
 
 function assignPlayers(e) {
     const playerCount = Number(e.target.textContent)
-	emptyTile[0].textContent=playerCount
+	emptyBlock[1].textContent=playerCount
 	if (playerCount < 16) {
 		for (let i=0; i<16; i++) {
 			selectKeys[i].classList.add("inactive")
@@ -164,13 +164,13 @@ function assignPlayers(e) {
 	hitKey[0].classList.add("active")
 	stayKey[0].classList.add("active")
 	buildDeck(keyboard)
-	emptyBlock[1].textContent = "Player ${activePlayer}"
+	emptyTile[o].textContent = "Player ${activePlayer+1}"
 	return
 }
 
 
 function handleKeyPress(e) {
-    playerCount=Number(emptyTile[0].textContent)
+    playerCount=Number(emptyBlock[1].textContent)
 	showAlert(playerCount, 5000)	   
 	if (e.key.match(/^[a-z]$/)) {
     pressKey(e.key)
@@ -210,7 +210,7 @@ function pressStay() {
 }
 
 function playerChange() {
-    playerCount=Number(emptyTile[0].textContent)
+    playerCount=Number(emptyBlock[1].textContent)
 	sums[activePlayer].classList.remove("active")
 	removeStatusUpdate (keyboard, "active", activePlayer)
 	let roundSum = 0
@@ -238,7 +238,7 @@ function playerChange() {
 	    }  
 	  }	
 	}
-	emptyBlock[1].textContent = "Player ${activePlayer}"
+	emptyTile[1].textContent = "Player ${activePlayer+1}"
 	addStatusUpdate (keyboard, "active", activePlayer)
 	sums[activePlayer].classList.add("active")
 	guessGrid[0].textContent=keyboard[activePlayer*7].textContent
@@ -271,7 +271,7 @@ function showAlert(message, duration = 1000) {
 }
 
 function bust() {
-	playerCount=Number(emptyTile[0].textContent)
+	playerCount=Number(emptyBlock[1].textContent)
 	let checkArray = []
 	checkArray.push(Number(guessGrid[0].textContent))
 	checkArray.push(Number(guessGrid[1].textContent))
