@@ -260,6 +260,14 @@ function playerChange() {
 	guessGrid[4].textContent=keyboard[activePlayer*7+4].textContent	
 	guessGrid[5].textContent=keyboard[activePlayer*7+5].textContent	
 	guessGrid[6].textContent=keyboard[activePlayer*7+6].textContent	
+	for (let i=0; i<7; i++) {
+		let updateAmount = String(guessGrid[i].textContent)
+		//showAlert(activePlayer*7+round,5000)
+		//showAlert(i, 5000)
+		//showAlert(updateAmount, 5000)
+		guessGrid[i].classList.add(updateAmount)
+		//keyboard[i].classList.add("1")
+	}
 	return
 }
 
