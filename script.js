@@ -265,8 +265,8 @@ function playerChange() {
 		//showAlert(activePlayer*7+round,5000)
 		//showAlert(i, 5000)
 		//showAlert(updateAmount, 5000)
-		guessGrid[i].classList.add(updateAmount)
-		//keyboard[i].classList.add("1")
+		//guessGrid[i].classList.add(updateAmount)
+		guessGrid[i].classList.add("1")
 	}
 	return
 }
