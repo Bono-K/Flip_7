@@ -408,3 +408,82 @@ body {
 .alert.hide {
   opacity: 0;
 }
+
+
+.tile.1 {
+  background-color: #4caf50
+}
+.key.1 {
+  background-color: #4caf50
+}  
+.tile.2 {
+  background-color: #009688
+}
+.key.2 {
+  background-color: #009688
+}    
+.tile.3 {
+  background-color: #00bcd4
+}
+.key.3 {
+  background-color: #00bcd4
+}    
+.tile.4 {
+  background-color: #03a9f4
+}
+.key.4 {
+  background-color: #03a9f4
+}    
+.tile.5 {
+  background-color: #2196f3
+}
+.key.5 {
+  background-color: #2196f3
+}    
+.tile.6 {
+  background-color: #3f51b5
+}
+.key.6 {
+  background-color: #3f51b5
+}    
+.tile.7 {
+  background-color: #673ab7
+}
+.key.7 {
+  background-color: #673ab7
+}    
+.tile.8 {
+  background-color: #9c27b0
+}
+.key.8 {
+  background-color: #9c27b0
+}    
+.tile.9 {
+  background-color: #ffc107
+}
+.key.9 {
+  background-color: #ffc107
+}    
+.tile.10 {
+  background-color: #ff5722
+}
+.key.10 {
+  background-color: #ff5722
+}    
+.tile.11 {
+  background-color: #e91e63
+}
+.key.11 {
+  background-color: #e91e63
+}    
+.tile.12 {
+  background-color: #f44336
+}
+.key.12 {
+  background-color: #f44336
+}    
+
+
+
+
+  
