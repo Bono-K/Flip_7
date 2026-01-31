@@ -229,8 +229,8 @@ function playerChange() {
 	showAlert(playerCount, 5000)	
 	for (let i=0; activePlayer*7<activePlayer*7+round+1; i++) {
 		showAlert(i, 5000)
-		showAlert(string(keyboard[i].textContent), 5000)	
-		keyboard[i].classList.add(string(keyboard[i].textContent))
+		showAlert(String(keyboard[i].textContent), 5000)	
+		keyboard[i].classList.add(String(keyboard[i].textContent))
 	}
 	activePlayer = activePlayer + 1
 	if (activePlayer == playerCount) {
