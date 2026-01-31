@@ -228,10 +228,11 @@ function playerChange() {
 	activeSum.textContent = roundSum
 	for (let i=(activePlayer*7); i<(activePlayer*7+round+1); i++) {
 		let updateAmount = String(keyboard[i].textContent)
-		showAlert(activePlayer*7+round,5000)
-		showAlert(i, 5000)
-		showAlert(updateAmount, 5000)
+		//showAlert(activePlayer*7+round,5000)
+		//showAlert(i, 5000)
+		//showAlert(updateAmount, 5000)
 		keyboard[i].classList.add(updateAmount)
+		keyboard[i].classList.add("1")
 	}
 	activePlayer = activePlayer + 1
 	if (activePlayer == playerCount) {
