@@ -227,7 +227,7 @@ function playerChange() {
 	const activeSum = sums[activePlayer]	
 	activeSum.textContent = roundSum
 	for (let i=(activePlayer*7); i<(activePlayer*7+round+1); i++) {
-		let updateAmount = keyboard[i].textContent
+		let updateAmount = String(keyboard[i].textContent)
 		showAlert(activePlayer*7+round,5000)
 		showAlert(i, 5000)
 		showAlert(updateAmount, 5000)
