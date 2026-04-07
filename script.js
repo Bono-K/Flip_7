@@ -254,7 +254,7 @@ function playerChange() {
 	}
 	let displayPlayer = activePlayer+1
 	emptyTile[0].textContent =  "Player " + displayPlayer
-	 (keyboard, "active", activePlayer)
+	addStatusUpdate(keyboard, "active", activePlayer)
 	sums[activePlayer].classList.add("active")
 	guessGrid[0].textContent=keyboard[activePlayer*7].textContent
 	guessGrid[1].textContent=keyboard[activePlayer*7+1].textContent	
@@ -308,7 +308,7 @@ function bust() {
 	let revertArray = Array.from(setCheck)
 	if (revertArray.length !== round+2) {
 		stayPlayers.push(activePlayer)
-		 (keyboard, "bust", activePlayer)
+		addStatusUpdate(keyboard, "bust", activePlayer)
 		sums[activePlayer].classList.add("bust")
 		//if (stayPlayers.length = playerCount) {
 			//stopInteraction()
