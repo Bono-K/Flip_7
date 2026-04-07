@@ -1,4 +1,4 @@
-
+const numDict = { 1: "one", 2: "two", 3: "three", 4: "four", 5:"five", 6:"six", 7:"seven", 8:"eight", 9:"nine", 10:"ten", 11:"eleven", 12:"twelve" };
 
 let baseDeck = [
 //	"0",
@@ -254,7 +254,7 @@ function playerChange() {
 	}
 	let displayPlayer = activePlayer+1
 	emptyTile[0].textContent =  "Player " + displayPlayer
-	addStatusUpdate (keyboard, "active", activePlayer)
+	 (keyboard, "active", activePlayer)
 	sums[activePlayer].classList.add("active")
 	guessGrid[0].textContent=keyboard[activePlayer*7].textContent
 	guessGrid[1].textContent=keyboard[activePlayer*7+1].textContent	
@@ -269,7 +269,7 @@ function playerChange() {
 		//showAlert(i, 5000)
 		//showAlert(updateAmount, 5000)
 		//guessGrid[i].classList.add(updateAmount)
-		guessGrid[i].classList.add("1")
+		guessGrid[i].classList.add(numDict[1])
 	}
 	return
 }
@@ -308,7 +308,7 @@ function bust() {
 	let revertArray = Array.from(setCheck)
 	if (revertArray.length !== round+2) {
 		stayPlayers.push(activePlayer)
-		addStatusUpdate (keyboard, "bust", activePlayer)
+		 (keyboard, "bust", activePlayer)
 		sums[activePlayer].classList.add("bust")
 		//if (stayPlayers.length = playerCount) {
 			//stopInteraction()
