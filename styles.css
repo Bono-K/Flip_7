@@ -410,76 +410,76 @@ body {
 }
 
 
-.tile.1 {
+.tile.one {
   background-color:  hsl(115, 29%, 43%);
 }
-.key.1 {
+.key.one {
   background-color: #4caf50
 }  
-.tile.2 {
+.tile.two {
   background-color: #009688
 }
-.key.2 {
+.key.two {
   background-color: #009688
 }    
-.tile.3 {
+.tile.three {
   background-color: #00bcd4
 }
-.key.3 {
+.key.three {
   background-color: #00bcd4
 }    
-.tile.4 {
+.tile.four {
   background-color: #03a9f4
 }
-.key.4 {
+.key.four {
   background-color: #03a9f4
 }    
-.tile.5 {
+.tile.five {
   background-color: #2196f3
 }
-.key.5 {
+.key.five {
   background-color: #2196f3
 }    
-.tile.6 {
+.tile.six {
   background-color: #3f51b5
 }
-.key.6 {
+.key.six {
   background-color: #3f51b5
 }    
-.tile.7 {
+.tile.seven {
   background-color: #673ab7
 }
-.key.7 {
+.key.seven {
   background-color: #673ab7
 }    
-.tile.8 {
+.tile.eight {
   background-color: #9c27b0
 }
-.key.8 {
+.key.eight {
   background-color: #9c27b0
 }    
-.tile.9 {
+.tile.nine {
   background-color: #ffc107
 }
-.key.9 {
+.key.nine {
   background-color: #ffc107
 }    
-.tile.10 {
+.tile.ten {
   background-color: #ff5722
 }
-.key.10 {
+.key.ten {
   background-color: #ff5722
 }    
-.tile.11 {
+.tile.eleven {
   background-color: #e91e63
 }
-.key.11 {
+.key.eleven {
   background-color: #e91e63
 }    
-.tile.12 {
+.tile.twelve {
   background-color: #f44336
 }
-.key.12 {
+.key.twelve {
   background-color: #f44336
 }    
 
