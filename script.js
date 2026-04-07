@@ -269,7 +269,7 @@ function playerChange() {
 		//showAlert(i, 5000)
 		//showAlert(updateAmount, 5000)
 		//guessGrid[i].classList.add(updateAmount)
-		guessGrid[i].classList.add(numDict[updateAmount])
+		//guessGrid[i].classList.add(numDict[updateAmount])
 	}
 	return
 }
