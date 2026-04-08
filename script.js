@@ -191,7 +191,7 @@ function pressKey() {
     activeKey.textContent = deck[cardSelect]
 	activeTile.textContent = deck[cardSelect]
 	let keyClass = numDict[deck[cardSelect]]
-	activeKey.classList.add(keyClass
+	activeKey.classList.add(keyClass)
 	//activeTile.classList.add(deck[cardSelect])
 	deck.splice(cardSelect,1)
     bust()
