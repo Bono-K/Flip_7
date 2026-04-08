@@ -410,22 +410,22 @@ body {
 }
 
 
-.tile.one {
+.tile.active.one {
   background-color:  hsl(115, 29%, 43%);
 }
-.key.one {
+.key.active.one {
   background-color: #4caf50
 }  
-.tile.two {
+.tile.active.two {
   background-color: #009688
 }
-.key.two {
+.key.active.two {
   background-color: #009688
 }    
-.tile.three {
+.tile.active.three {
   background-color: #00bcd4
 }
-.key.three {
+.key.active.three {
   background-color: #00bcd4
 }    
 .tile.four {
@@ -470,16 +470,16 @@ body {
 .key.ten {
   background-color: #ff5722
 }    
-.tile.11 {
+.tile.active.eleven {
   background-color: #e91e63
 }
-.key.11 {
+.key.active.eleven {
   background-color: #e91e63
 }    
-.tile."12" {
+.tile.active.twelve {
   background-color: #f44336
 }
-.key."12" {
+.key.active.twelve {
   background-color: #f44336
 }    
 
