@@ -190,8 +190,9 @@ function pressKey() {
     activeTile.textContent = deck[cardSelect]
     activeKey.textContent = deck[cardSelect]
 	activeTile.textContent = deck[cardSelect]
-	activeKey.classList.add(deck[cardSelect])
-	activeTile.classList.add(deck[cardSelect])
+	let keyClass = numDict[deck[cardSelect]]
+	activeKey.classList.add(keyClass
+	//activeTile.classList.add(deck[cardSelect])
 	deck.splice(cardSelect,1)
     bust()
 	playerChange()
@@ -256,6 +257,10 @@ function playerChange() {
 	emptyTile[0].textContent =  "Player " + displayPlayer
 	addStatusUpdate(keyboard, "active", activePlayer)
 	sums[activePlayer].classList.add("active")
+	let keyClass = guessGrid[0]
+	guessGrid[0].classList.remove(keyClass)
+	let keyClass = guessGrid[1]
+	guessGrid[1].classList.remove(keyClass)	
 	guessGrid[0].textContent=keyboard[activePlayer*7].textContent
 	guessGrid[1].textContent=keyboard[activePlayer*7+1].textContent	
 	guessGrid[2].textContent=keyboard[activePlayer*7+2].textContent		
@@ -269,8 +274,8 @@ function playerChange() {
 		//showAlert(i, 5000)
 		//showAlert(updateAmount, 5000)
 		//guessGrid[i].classList.add(updateAmount)
-		let keyClass = numDict[updateAmount]
-		guessGrid[i].classList.add(keyClass)
+		let guessClass = numDict[updateAmount]
+		guessGrid[i].classList.add(guessClass)
 		showAlert(keyClass, 5000)
 	}
 	return
