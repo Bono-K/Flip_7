@@ -259,8 +259,8 @@ function playerChange() {
 	sums[activePlayer].classList.add("active")
 	let keyClass = guessGrid[0]
 	guessGrid[0].classList.remove(keyClass)
-	let keyClass = guessGrid[1]
-	guessGrid[1].classList.remove(keyClass)	
+	let keyClass1 = guessGrid[1]
+	guessGrid[1].classList.remove(keyClass1)	
 	guessGrid[0].textContent=keyboard[activePlayer*7].textContent
 	guessGrid[1].textContent=keyboard[activePlayer*7+1].textContent	
 	guessGrid[2].textContent=keyboard[activePlayer*7+2].textContent		
