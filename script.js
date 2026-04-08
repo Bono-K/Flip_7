@@ -258,9 +258,9 @@ function playerChange() {
 	addStatusUpdate(keyboard, "active", activePlayer)
 	sums[activePlayer].classList.add("active")
 	let oldGuessClass =  numDict[guessGrid[0].textContent]
-	guessGrid[0].classList.remove(oldGuessClass)
-	let keyClass1 = guessGrid[1]
-	guessGrid[1].classList.remove(keyClass1)	
+	//guessGrid[0].classList.remove(oldGuessClass)
+	//let keyClass1 = guessGrid[1]
+	//guessGrid[1].classList.remove(keyClass1)	
 	guessGrid[0].textContent=keyboard[activePlayer*7].textContent
 	guessGrid[1].textContent=keyboard[activePlayer*7+1].textContent	
 	guessGrid[2].textContent=keyboard[activePlayer*7+2].textContent		
